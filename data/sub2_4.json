@@ -1,0 +1,13 @@
+{
+  "project": [
+    {"Category":"architecture","CategoryName":"건축","Region":"gyeonggi","Image":"./images/sub2/sub2_1_project01X2.jpg","Name":"HK inno.N 판교연구소","Location":"경기도 성남시 수정구"},
+    {"Category":"architecture","CategoryName":"건축","Region":"gyeonggi","Image":"./images/sub2/sub2_1_project02X2.jpg","Name":"경기신용보증재단 사옥","Location":"경기도 수원시 영통구"},
+    {"Category":"civil","CategoryName":"토목","Region":"incheon","Image":"./images/sub2/sub2_2_project01X2.jpg","Name":"인천국제공항 4단계 계류장","Location":"인천광역시 중구"},
+    {"Category":"housing","CategoryName":"주택","Region":"seoul","Image":"./images/sub2/sub2_3_project01X2.jpg","Name":"한남 더 힐","Location":"서울특별시 용산구"},
+    {"Category":"architecture","CategoryName":"건축","Region":"seoul","Image":"./images/sub2/sub2_1_project03X2.jpg","Name":"센터원","Location":"서울특별시 중구 수하동"},
+    {"Category":"civil","CategoryName":"토목","Region":"jeonnam","Image":"./images/sub2/sub2_2_project02X2.jpg","Name":"광양항 낙포부두","Location":"전라남도 여수시"},
+    {"Category":"civil","CategoryName":"토목","Region":"busan","Image":"./images/sub2/sub2_2_project03X2.jpg","Name":"부산 에코델타시티","Location":"부산광역시 강서구"},
+    {"Category":"housing","CategoryName":"주택","Region":"gyeonggi","Image":"./images/sub2/sub2_3_project02X2.jpg","Name":"여주역 금호어울림 베르티스","Location":"경기도 여주시"},
+    {"Category":"housing","CategoryName":"주택","Region":"incheon","Image":"./images/sub2/sub2_3_project03X2.jpg","Name":"검단 금호어울림 센트럴","Location":"인천광역시 서구"}
+  ]
+}

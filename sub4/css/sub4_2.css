@@ -1,0 +1,202 @@
+@charset "UTF-8";
+
+#content .content_area{
+    min-height: 0;
+    padding-bottom: 150px;
+}
+
+/* 01 안전경영 */
+.con1{padding-bottom: 140px;}
+
+.con1 .main_img{
+    width: 1400px;
+    height: 510px;
+    display: block;
+    object-fit: cover;
+}
+
+.con1 .text_box{
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.con1 .text_box strong{
+    width: 650px;
+    font-size: var(--font-display-medium-size);
+    line-height: 1.35;
+}
+
+.con1 .text_box span{
+    width: 640px;
+    padding-top: 25px;
+    color: var(--color-font-02);
+    font-size: var(--font-label-large-size);
+    line-height: 1.8;
+}
+
+/* 02 예방 중심 안전관리 */
+.con2 .info_box{
+    padding: 45px 50px 50px;
+    background: var(--color-sub-01);
+}
+
+.con2 .box_title{
+    display: block;
+    font-size: var(--font-h4-size);
+}
+
+.con2 .info_box ol{
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.con2 .info_box li{width: 390px;}
+
+.con2 .info_box li span{
+    display: block;
+    padding-bottom: 8px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-h5-size);
+    font-weight: 600;
+    border-bottom: 2px solid #d4d9de;
+}
+
+.con2 .info_box li strong,
+.con2 .info_box li em{display: block;}
+
+.con2 .info_box li strong{
+    margin-top: 18px;
+    font-size: var(--font-body-large-size);
+}
+
+.con2 .info_box li em{
+    margin-top: 5px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    font-style: normal;
+}
+
+/* 클릭 이미지 영역 */
+.photo_box{
+    height: 570px;
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.big_photo{
+    width: 900px;
+    height: 570px;
+    overflow: hidden;
+}
+
+.big_photo img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.small_photo{
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.small_photo li,
+.small_photo button{
+    width: 460px;
+    height: 275px;
+}
+
+.small_photo button{
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.small_photo img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .4s ease-out, opacity .4s ease-out;
+}
+
+.small_photo button:hover img,
+.small_photo button:focus img{
+    opacity: .8;
+    transform: scale(1.04);
+}
+
+.cert_text{
+    margin-top: 30px;
+    display: block;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+}
+
+/* 03 안전문화 */
+.con3{
+    padding: 100px 0 105px;
+    color: var(--color-white);
+    background: #18191b;
+}
+
+.con3 .con_inner{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+.con3 .text_box strong,
+.con3 .text_box span{display: block;}
+
+.con3 .text_box strong{font-size: var(--font-h5-size);}
+
+.con3 .text_box span{
+    margin-top: 12px;
+    color: #babdc2;
+    font-size: var(--font-body-large-size);
+}
+
+.con3 ol{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.con3 li{
+    width: 400px;
+    padding-top: 18px;
+    border-top: 2px solid #595c61;
+}
+
+.con3 li span,
+.con3 li strong,
+.con3 li em{display: block;}
+
+.con3 li span{
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-large-size);
+    font-weight: 600;
+}
+
+.con3 li strong{
+    margin-top: 15px;
+    font-size: var(--font-h6-size);
+}
+
+.con3 li em{
+    margin-top: 12px;
+    color: #babdc2;
+    font-size: var(--font-body-medium-size);
+    font-style: normal;
+}

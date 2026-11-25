@@ -1,0 +1,395 @@
+@charset "UTF-8";
+
+/* ========================================================
+   분양정보 본문
+======================================================== */
+
+#content .content_area{
+    width: 100%;
+    overflow: hidden;
+}
+
+#content .content_area .sales_intro,  
+#content .content_area .sales_complex{
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* ===== 01 ARTERA SALES ===== */
+#content .sales_intro{
+    width: 1400px;
+    height: 240px;
+    margin: 0 auto;
+    padding-top: 42px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+#content .sales_intro > div{width: 900px;}
+
+#content .sales_intro .sec_label{
+    display: block;
+    color: var(--color-point-02);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-large-size);
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: .1em;
+}
+
+#content .sales_intro .sec_label::after{display: none;}
+
+#content .sales_intro > div > strong{
+    margin-top: 8px;
+    display: block;
+    color: var(--color-font-01);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+#content .sales_intro .intro_desc{
+    width: 600px;
+    height: 82px;
+    margin-top: 92px;
+    padding-bottom: 20px;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
+    color: var(--color-font-02);
+    font-size: var(--font-label-large-size);
+    line-height: 1.65;
+    text-align: right;
+}
+
+/* ===== 02 전체 분양 단지 ===== */
+#content .sales_complex{
+    width: 1400px;
+    min-height: 805px;
+    margin: 0 auto;
+    padding: 48px 0 60px;
+}
+
+#content .sales_title{
+    height: 65px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#content .sales_title > strong{
+    width: 900px;
+    display: block;
+    color: var(--color-point-01);
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .sales_title > span{
+    width: 310px;
+    display: block;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.5;
+    text-align: right;
+}
+
+#content .sales_list{
+    height: 600px;
+    margin-top: 34px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#content .sales_list > li{
+    width: 440px;
+    height: 600px;
+}
+
+#content .sales_list .sales_card{
+    width: 440px;
+    height: 100%;
+    display: block;
+    color: var(--color-font-01);
+}
+
+#content .sales_list .img_box{
+    width: 440px;
+    height: 300px;
+    overflow: hidden;
+}
+
+#content .sales_list .img_box img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform .4s;
+}
+
+#content .sales_list .sales_card:hover .img_box img{transform: scale(1.03);}
+
+#content .sales_info{padding-top: 18px;}
+
+#content .sales_info .status{
+    width: 120px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border-radius: 18px;
+    color: var(--color-point-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 600;
+    line-height: 1.5;
+    word-spacing: 5px;
+}
+
+#content .sales_info .selling{background: var(--color-point-02);}
+#content .sales_info .upcoming{background: var(--color-point-03);}
+#content .sales_info .complete{background: var(--color-point-04);}
+
+#content .sales_info > strong{
+    margin-top: 12px;
+    display: block;
+    color: var(--color-point-01);
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .sales_info .complex_desc{
+    margin-top: 10px;
+    display: block;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.5;
+}
+
+#content .sales_info .more{
+    margin-top: 18px;
+    padding-bottom: 18px;
+    display: block;
+    color: var(--color-point-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+    border-bottom: 1px solid var(--color-sub-01);
+}
+
+#content .sales_info .more span{font-weight: 700;}
+
+#content .sales_note{
+    margin-top: 16px;
+    display: block;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.5;
+}
+
+/* ===== 03 분양 일정 안내 ===== */
+#content .sales_notice{
+    width: 100%;
+    height: 130px;
+    padding: 0 calc(50% - 700px);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    background: var(--color-point-04);
+}
+
+#content .sales_notice > strong{
+    width: 360px;
+    color: var(--color-point-01);
+    font-size: var(--font-body-large-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .sales_notice .notice_desc{
+    width: 800px;
+    display: block;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.65;
+}
+
+#content .sales_notice > a{
+    width: 240px;
+    color: var(--color-font-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.65;
+    text-align: right;
+}
+
+/* ===== 분양정보 팝업 ===== */
+.modal_box{
+    width: 100%;
+    height: 100%;
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 200;
+}
+
+.modal_box .modal_bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,.65);
+}
+
+.modal_box .modal_content{
+    width: 1100px;
+    height: 620px;
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    overflow: hidden;
+    background: var(--color-white);
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,.25);
+    transform: translate(-50%,-50%);
+}
+
+.modal_box .modal_close{
+    width: 52px;
+    height: 52px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1;
+    border: 1px solid var(--color-sub-01);
+    border-radius: 50%;
+    color: var(--color-point-01);
+    background: var(--color-white);
+    font-size: var(--font-h6-size);
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.modal_box .modal_close:hover{
+    color: var(--color-white);
+    background: var(--color-point-01);
+}
+
+.modal_box .modal_visual{
+    width: 550px;
+    height: 620px;
+}
+
+.modal_box .modal_visual img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.modal_box .modal_info{
+    width: 550px;
+    padding: 70px 60px;
+    box-sizing: border-box;
+}
+
+.modal_box .modal_info .status{
+    width: 120px;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    color: var(--color-point-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 600;
+    line-height: 1.5;
+    word-spacing: 5px;
+    animation: blinker 2.5s linear infinite;
+}
+
+/* 모달의 분양 상태 배지가 부드럽게 깜빡이는 효과 */
+@keyframes blinker{
+    0%{opacity: 1;}
+    50%{opacity: .45;}
+    100%{opacity: 1;}
+}
+
+.modal_box .modal_info .selling{background: var(--color-point-02);}
+.modal_box .modal_info .upcoming{background: var(--color-point-03);}
+.modal_box .modal_info .complete{background: var(--color-point-04);}
+
+.modal_box .modal_info > strong{
+    margin-top: 18px;
+    display: block;
+    color: var(--color-point-01);
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.modal_box .modal_desc{
+    margin-top: 18px;
+    display: block;
+    color: var(--color-font-02);
+    font-size: var(--font-label-large-size);
+    line-height: 1.7;
+}
+
+.modal_box .modal_info dl{
+    margin-top: 28px;
+    border-top: 1px solid var(--color-sub-01);
+}
+
+.modal_box .modal_info dl > div{
+    min-height: 54px;
+    padding: 14px 0;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--color-sub-01);
+}
+
+.modal_box .modal_info dt{
+    width: 80px;
+    flex-shrink: 0;
+    color: var(--color-point-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.modal_box .modal_info dd{
+    width: 350px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.6;
+}
+
+.modal_box .modal_link{
+    height: 48px;
+    margin-top: 28px;
+    padding: 0 24px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    color: var(--color-white);
+    background: var(--color-point-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+    transition: background .3s;
+}
+
+.modal_box .modal_link span{margin-left: 14px;}
+
+.modal_box .modal_link:hover{background: var(--color-main-01);}

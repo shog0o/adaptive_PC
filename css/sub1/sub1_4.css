@@ -1,0 +1,281 @@
+@charset "UTF-8";
+
+/* 오시는 길 콘텐츠 공통 영역 */
+#content .content_area {
+    padding: 56px 6%;
+    background: var(--color-white);
+}
+
+/* 페이지 안내 */
+#content .location_header {
+    margin-bottom: 40px;
+}
+
+#content .section_label {
+    margin-bottom: 12px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+#content .section_intro p:first-child {
+    color: var(--color-font-01);
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+#content .section_intro p:last-child {
+    margin-top: 8px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-small-size);
+    font-weight: 400;
+    line-height: 1.65;
+    word-break: keep-all;
+}
+
+/* 본사·나주지사 선택 탭 */
+#content .office_nav {
+    margin-top: 24px;
+}
+
+#content .office_tabs {
+    display: flex;
+    gap: 8px;
+}
+
+#content .office_tab {
+    width: 50%;
+}
+
+#content .office_tab a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    border-radius: 10px;
+    background: var(--color-sub-01);
+    color: var(--color-font-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+    transition: background-color .2s ease, color .2s ease;
+}
+
+#content .office_tab a.active {
+    background: var(--color-main-01);
+    color: var(--color-white);
+}
+
+/* 사업장 정보 */
+#content .office_panel {
+    display: flex;
+    flex-direction: column;
+}
+
+/* 지도 위치를 주소 정보와 문의 정보 사이에 배치한다. */
+#content .office_info {
+    display: contents;
+}
+
+#content .office_basic {
+    order: 1;
+}
+
+#content .office_map {
+    order: 2;
+}
+
+#content .contact_panel,
+#content .branch_contact {
+    order: 3;
+}
+
+#content .office_en {
+    display: block;
+    margin-bottom: 10px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+#content .office_basic h3 {
+    color: var(--color-font-01);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+#content .office_basic dl,
+#content .branch_contact dl {
+    margin-top: 20px;
+}
+
+#content .office_basic dt,
+#content .branch_contact dt {
+    margin-bottom: 8px;
+    color: var(--color-font-02);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+#content .office_basic dd,
+#content .branch_contact dd {
+    color: var(--color-font-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.65;
+    word-break: keep-all;
+}
+
+/* 경로 자세히 보기 */
+#content .route_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    margin-top: 20px;
+    border-radius: 10px;
+    background: var(--color-main-01);
+    color: var(--color-white);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .route_btn span {
+    margin-left: 8px;
+    font-family: var(--font-family-en);
+}
+
+/* 네이버 지도 */
+#content .office_map {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    margin-top: 32px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: var(--color-sub-01);
+}
+
+/* 지도 우측 확대·축소 및 위치 복귀 버튼 */
+#content .office_map .map_zoom {
+    overflow: visible;
+}
+
+#content .office_map .map_return {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    margin: 6px 10px;
+    padding: 0;
+    border: 1px solid var(--color-light-gray);
+    background: var(--color-white);
+    cursor: pointer;
+
+}
+
+#content .office_map .map_return img {
+    display: block;
+    width: 20px;
+    height: 20px;
+}
+
+/* 본사 문의 전화 */
+#content .contact_panel {
+    margin-top: 40px;
+}
+
+#content .contact_title {
+    display: block;
+    margin-bottom: 16px;
+    color: var(--color-font-01);
+    font-size: var(--font-h6-size);
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+#content .contact_list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+#content .contact_list > div {
+    min-height: 76px;
+    padding: 12px;
+    box-sizing: border-box;
+    background: var(--color-sub-01);
+}
+
+#content .contact_list dt {
+    color: var(--color-font-01);
+    font-size: var(--font-body-small-size);
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+#content .contact_list dd {
+    margin-top: 4px;
+    color: var(--color-font-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+#content .call_center {
+    margin-top: 14px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-small-size);
+    font-weight: 400;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+#content .call_center strong,
+#content .call_center span {
+    display: block;
+}
+
+#content .call_center strong {
+    font-weight: 400;
+}
+
+/* 나주지사 연락처 */
+#content .branch_contact {
+    margin-top: 32px;
+}
+
+#content .branch_contact dl {
+    padding: 16px;
+    background: var(--color-sub-01);
+}
+
+#content .branch_contact .route_btn {
+    margin-top: 16px;
+}
+
+@media screen and (min-width: 500px) {
+    #content .content_area {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    #content .office_map {
+        height: 340px;
+    }
+}

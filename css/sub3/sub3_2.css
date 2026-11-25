@@ -1,0 +1,204 @@
+@charset "UTF-8";
+
+/* sub3_2 단지 정보 전용 스타일 */
+#content .complex_gallery {
+    padding: 56px 6%;
+    box-sizing: border-box;
+    background: var(--color-white);
+}
+
+/* 갤러리 제목 */
+#content .gallery_intro .sec_label {
+    margin: 0;
+    color: var(--color-point-02);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .gallery_intro strong {
+    display: block;
+    margin-top: 10px;
+    color: var(--color-point-01);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.55;
+    text-align: left;
+}
+
+#content .gallery_intro .gallery_desc {
+    display: none;
+}
+
+/* 단지 이미지 */
+#content .complex_gallery .img_box {
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    overflow: hidden;
+    background: var(--color-sub-01);
+    line-height: 0;
+}
+
+#content .complex_gallery .img_box::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .25);
+    pointer-events: none;
+}
+
+#content .complex_gallery .img_box img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#content .complex_gallery .region {
+    position: absolute;
+    z-index: 1;
+    left: 12px;
+    bottom: 12px;
+    color: var(--color-white);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* 단지명과 상세 정보 */
+#content .gallery_info {
+    margin-top: 24px;
+}
+
+#content .gallery_info dt {
+    color: var(--color-point-01);
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .gallery_info dd {
+    margin: 14px 0 0;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+/* 이전·다음 버튼과 현재 순서 */
+#content .gallery_control {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 72%;
+    margin: 20px auto 0;
+    color: var(--color-point-01);
+}
+
+#content .gallery_control a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    color: var(--color-point-01);
+}
+
+#content .gallery_control a span {
+    font-family: var(--font-family-en);
+    font-size: var(--font-h4-size);
+    font-weight: 400;
+    line-height: 1;
+}
+
+#content .gallery_control .text {
+    font-family: var(--font-family-en);
+    font-size: var(--font-h5-size);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* 이미지 위치 표시 */
+#content .gallery_dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 8px;
+    margin-top: 10px;
+}
+
+#content .gallery_dots span {
+    display: block;
+    width: 10px;
+    height: 10px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-point-01);
+    border-radius: 50%;
+    background: var(--color-white);
+}
+
+#content .gallery_dots span.active {
+    background: var(--color-point-01);
+}
+
+/* 분양 정보 연결 배너 */
+#content .sales_banner {
+    padding: 56px 6%;
+    box-sizing: border-box;
+    background: #f0d5ba;
+    text-align: center;
+}
+
+#content .sales_banner .banner_desc {
+    display: block;
+    color: var(--color-point-01);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.55;
+    word-break: keep-all;
+}
+
+#content .sales_banner a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px;
+    margin-top: 28px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border-radius: 14px;
+    background: var(--color-point-01);
+    color: var(--color-white);
+    font-size: var(--font-body-large-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .sales_banner a span {
+    display: inline-block;
+    margin-left: 10px;
+    font-family: var(--font-family-en);
+}
+
+@media screen and (min-width: 500px) {
+    #content .complex_gallery,
+    #content .sales_banner {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    #content .complex_gallery .region {
+        left: 20px;
+        bottom: 20px;
+    }
+
+    #content .sales_banner a {
+        min-height: 80px;
+        border-radius: 20px;
+    }
+}

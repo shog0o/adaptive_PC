@@ -1,0 +1,358 @@
+@charset "UTF-8";
+
+/* 본문 공통 */
+/* 본문 전체 너비와 가운데 정렬, 상단 여백 */
+#content .content_area{
+    width: 1400px;
+    margin: 0 auto;
+}
+/* 각 섹션의 번호와 영문 소제목 */
+#content .sec_label{
+    display: block;
+    margin-bottom: 16px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-large-size);
+    font-weight: 600;
+    line-height: 1.3;
+}
+/* 영문 소제목 아래 빨간 밑줄 */
+#content .sec_label::after{
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin-top: 10px;
+    border-radius: 2px;
+    background: var(--color-main-01);
+}
+/* 각 섹션의 한글 제목과 상단 여백 */
+#content .sec_tit{
+    margin-top: 45px;
+    font-size: var(--font-display-medium-size);
+    line-height: 1.4;
+    word-break: keep-all;
+}
+/* 각 섹션의 소개 문장 */
+#content .sec_desc{
+    color: var(--color-font-02);
+    font-size: var(--font-label-large-size);
+    word-break: keep-all;
+}
+
+/* 01. 복리후생 요약 */
+/* 요약 섹션의 위치 기준과 하단 여백 */
+#content .bnft_sum{
+    position: relative;
+    padding-bottom: 100px;
+}
+/* 첫 섹션은 본문 시작점에 맞춤 */
+#content .bnft_sum > .sec_tit{
+    margin-top: 0;
+}
+/* 요약 섹션 제목 아래 소개 문장 */
+#content .bnft_sum .sec_desc{
+    width: 660px;
+    margin-top: 30px;
+    line-height: 1.7;
+}
+/* 근무·건강·성장·가족 요약 항목을 4열로 배치 */
+#content .bnft_list{
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+}
+/* 요약 항목 각각의 너비, 가운데 정렬과 하단 구분선 */
+#content .bnft_list > li{
+    flex: 1;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--color-light-gray);
+    text-align: center;
+}
+/* 요약 항목의 아이콘 크기 */
+#content .bnft_list img{
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+/* 복리후생 픽토그램 AOS 효과: 위치 이동 없이 선명하게 확대 */
+#content .bnft_list img[data-aos="icon-pop"]{
+    opacity: 0;
+    filter: grayscale(1) brightness(1.15);
+    transform: scale(.82);
+    transition-property: opacity, transform, filter;
+}
+#content .bnft_list img[data-aos="icon-pop"].aos-animate{
+    opacity: 1;
+    filter: grayscale(0) brightness(1);
+    transform: scale(1);
+}
+
+/* 마우스를 올렸을 때 픽토그램만 가볍게 강조 */
+#content .bnft_list > li:hover img[data-aos="icon-pop"].aos-animate{
+    transform: scale(1.08);
+}
+/* 유연한 근무·건강관리 등 한글 항목명 */
+#content .bnft_list dt{
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+/* WORK·HEALTH 등 빨간 영문 항목명 */
+#content .bnft_list dt span{
+    display: block;
+    margin: 5px 0 10px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-small-size);
+}
+/* 요약 항목 아래 지원 내용 */
+#content .bnft_list dd{
+    margin-top: 10px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+}
+
+/* 02. 복리후생 철학 */
+/* 철학 섹션의 빨간 박스와 설명을 좌우로 배치 */
+#content .bnft_intro{
+    display: flex;
+    align-items: flex-start;
+    gap: 80px;
+    padding: 70px 0 160px;
+}
+/* 왼쪽 빨간 슬로건 박스 */
+#content .intro_visual{
+    width: 520px;
+    min-height: 420px;
+    flex-shrink: 0;
+    padding: 45px 50px;
+    box-sizing: border-box;
+    background: var(--color-main-01);
+    color: var(--color-white);
+}
+/* 빨간 박스 상단의 KUMHO LIFE SYSTEM */
+#content .intro_visual > span{
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-small-size);
+    font-weight: 600;
+}
+/* 빨간 박스 안의 BETTER WORK. BETTER LIFE. */
+#content .intro_visual > strong{
+    display: block;
+    margin-top: 20px;
+    font-size: var(--font-h3-size);
+    line-height: 1.25;
+}
+/* 철학 섹션 오른쪽 텍스트 영역 */
+#content .intro_txt{
+    flex: 1;
+    min-width: 0;
+}
+/* 철학 대표 문구와 설명 사이 간격 */
+#content .intro_txt .sec_desc{
+    margin-top: 35px;
+}
+/* 철학 설명 아래 영문 키워드 목록 */
+#content .intro_list{
+    display: flex;
+    gap: 15px;
+    margin-top: 40px;
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-small-size);
+    font-weight: 600;
+}
+/* WORK·HEALTH 등 둥근 회색 키워드 박스 */
+#content .intro_list li{
+    min-width: 105px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    background: var(--color-sub-01);
+    text-align: center;
+    transition: background-color .3s ease, color .3s ease;
+}
+/* 키워드 박스에 마우스를 올렸을 때 */
+#content .intro_list li:hover{
+    background-color: var(--color-main-01);
+    color: var(--color-white);
+}
+
+/* 배경은 화면 전체 폭, 내용은 본문 폭 유지 */
+/* 상세 안내·문화 섹션의 배경 위치와 쌓임 순서 기준 */
+#content .bnft_guide,
+#content .bnft_culture{
+    position: relative;
+    isolation: isolate;
+}
+/* 두 섹션의 내용 뒤에 화면 전체 폭 배경 생성 */
+#content .bnft_guide::before,
+#content .bnft_culture::before{
+    content: '';
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+/* 03. 복리후생 상세 안내 */
+/* 상세 안내 섹션의 상하 여백 */
+#content .bnft_guide{
+    padding: 125px 0 175px;
+}
+/* 상세 안내 섹션의 연한 회색 배경 */
+#content .bnft_guide::before{
+    background: var(--color-sub-01);
+}
+/* 상세 안내 제목 아래 소개 문장 */
+#content .bnft_guide .sec_desc{
+    width: 710px;
+    margin-top: 30px;
+    line-height: 1.7;
+}
+/* 상세 안내 목록과 소개 문장 사이 여백 */
+#content .guide_list{
+    margin-top: 60px;
+}
+/* 상세 안내 한 행: 분류·설명·지원 목록의 3열 배치 */
+#content .guide_list > li{
+    display: flex;
+    align-items: flex-start;
+    min-height: 330px;
+    padding: 45px 40px;
+    border-left: 10px solid var(--color-main-01);
+    box-sizing: border-box;
+    background: var(--color-white);
+}
+/* 상세 안내 행 사이 간격 */
+#content .guide_list > li + li{
+    margin-top: 30px;
+}
+/* 두 번째·네 번째 안내 행의 연한 분홍색 배경 */
+#content .guide_list > li:nth-child(even){
+    background: var(--color-sub-02);
+}
+/* 상세 안내 행 왼쪽의 번호와 영문 분류 영역 */
+#content .guide_cate{
+    width: 280px;
+    flex-shrink: 0;
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 600;
+    line-height: 1.3;
+}
+/* 상세 안내 분류 번호 01~04 */
+#content .guide_cate span{
+    display: block;
+    margin-bottom: 15px;
+    color: var(--color-main-01);
+    font-size: var(--font-body-small-size);
+    font-weight: 600;
+    line-height: 1.6;
+}
+/* 상세 안내 행 가운데 제목과 설명 영역 */
+#content .guide_list > li > dl{
+    width: 490px;
+    flex-shrink: 0;
+    padding-top: 5px;
+}
+/* 몰입할 수 있는 하루 등 상세 안내 제목 */
+#content .guide_list dt{
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+/* 각 상세 안내 제목 아래 설명 문장 */
+#content .guide_list dd{
+    margin-top: 20px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+}
+/* 상세 안내 행 오른쪽 지원 목록과 세로 구분선 */
+#content .guide_list > li > ul{
+    flex: 1;
+    min-height: 225px;
+    padding: 5px 0 0 55px;
+    border-left: 1px solid var(--color-light-gray);
+    box-sizing: border-box;
+}
+/* 출근시간 선택제·건강검진 등 개별 지원 항목 */
+#content .guide_list > li > ul > li{
+    position: relative;
+    padding-left: 25px;
+    font-size: var(--font-label-large-size);
+    line-height: 1.5;
+}
+/* 개별 지원 항목 사이 간격 */
+#content .guide_list > li > ul > li + li{
+    margin-top: 40px;
+}
+/* 지원 항목 앞의 빨간 점 */
+#content .guide_list > li > ul > li::before{
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    left: 0;
+    top: 10px;
+    border-radius: 50%;
+    background: var(--color-main-01);
+}
+
+/* 04. 일하는 문화 */
+/* 문화 섹션의 상하 여백과 기본 글자색 */
+#content .bnft_culture{
+    padding: 90px 0 145px;
+    color: var(--color-white);
+}
+/* 문화 섹션의 어두운 배경 */
+#content .bnft_culture::before{
+    background: #141417;
+}
+/* 문화 항목을 4열로 배치하고 제목 아래 여백 설정 */
+#content .culture_list{
+    display: flex;
+    gap: 40px;
+    margin-top: 140px;
+}
+/* 문화 항목 각각의 너비, 높이와 상단 구분선 */
+#content .culture_list > li{
+    flex: 1;
+    min-height: 285px;
+    padding-top: 25px;
+    border-top: 1px solid var(--color-font-02);
+    box-sizing: border-box;
+}
+/* 문화 항목의 빨간 번호 01~04 */
+#content .culture_list > li > span{
+    display: block;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-large-size);
+}
+/* FLEXIBLE TIME 등 문화 항목의 영문 이름 */
+#content .culture_list > li > strong{
+    display: block;
+    margin-top: 20px;
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    line-height: 1.2;
+}
+/* 출근시간 선택제 등 문화 항목의 한글 제목 */
+#content .culture_list dt{
+    margin-top: 20px;
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+/* 문화 항목 아래 연한 회색 설명 문장 */
+#content .culture_list dd{
+    margin-top: 30px;
+    color: var(--color-light-gray);
+    font-size: var(--font-label-large-size);
+}

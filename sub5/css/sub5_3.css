@@ -1,0 +1,585 @@
+@charset "UTF-8";
+
+/* ==================================================
+   직무소개 sub5_3
+   ================================================== */
+
+/* 본문 공통 너비 */
+#content .content_area{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/* ===== 01. CAREER AREAS ===== */
+#content .career_area{
+    padding: 72px 0 140px;
+    box-sizing: border-box;
+}
+
+/* 상단 인트로 */
+#content .career_intro{
+    width: 1400px;
+    min-height: 220px;
+    position: relative;
+    margin-bottom: 88px;
+}
+
+#content .career_intro .sec_tit{
+    width: 610px;
+    margin: 0;
+    color: #141417;
+    font-size: var(--font-display-medium-size);
+    font-weight: 700;
+    line-height: 1.3;
+    word-break: keep-all;
+}
+
+#content .career_intro .sec_label{
+    display: block;
+    width: 300px;
+    margin-bottom: 26px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-large-size);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+#content .career_intro .sec_label::after{
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin-top: 10px;
+    background: var(--color-main-01);
+}
+
+#content .career_intro .sec_desc{
+    width: 650px;
+    position: absolute;
+    right: 0;
+    top: 94px;
+    margin: 0;
+    color: #747A84;
+    font-size: var(--font-label-large-size);
+    font-weight: 400;
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+/* ===== 대분류 아코디언 목록 ===== */
+#content .career_list{
+    width: 1400px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#content .career_item{
+    width: 1400px;
+}
+
+#content .career_link{
+    width: 1400px;
+    height: 148px;
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    box-sizing: border-box;
+    border: 1px solid #DDE1E7;
+    border-radius: 14px;
+    background: var(--color-white);
+    transition: background-color .3s ease, border-color .3s ease, border-radius .3s ease;
+}
+
+#content .career_icon{
+    width: 110px;
+    height: 110px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #D5DDED;
+    border-radius: 14px;
+    background: #F4F7FD;
+    overflow: hidden;
+    transition: background-color .3s ease, border-color .3s ease;
+}
+
+#content .career_icon img{
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+#content .career_name{
+    width: 300px;
+    height: 86px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+#content .career_name strong{
+    display: block;
+    color: #141417;
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.3;
+    transition: color .3s ease;
+}
+
+#content .career_name strong>span{
+    display: block;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+#content .career_link>p{
+    width: 794px;
+    flex-shrink: 0;
+    color: #747A84;
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.7;
+    word-break: keep-all;
+    transition: color .3s ease;
+}
+
+#content .career_more{
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    margin-left: auto;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 1px solid #141417;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+    transition: border-color .3s ease;
+}
+
+#content .career_more img{
+    width: 20px;
+    height: auto;
+}
+
+#content .career_more_minus{
+    display: none;
+}
+
+/* 상세 패널은 JavaScript에서 선택한 항목만 펼침 */
+#content .career_detail{
+    display: none;
+}
+
+#content .career_item.active>.career_link{
+    border-color: #0E0F12;
+    border-radius: 14px 14px 0 0;
+    background: var(--color-point-01);
+}
+
+#content .career_item.active>.career_link .career_icon{
+    border: 2px solid var(--color-main-01);
+    background: var(--color-white);
+}
+
+#content .career_item.active>.career_link .career_name strong{
+    color: var(--color-white);
+}
+
+#content .career_item.active>.career_link .career_name strong>span{
+    color: var(--color-main-01);
+}
+
+#content .career_item.active>.career_link>p{
+    color: #C9CDD5;
+}
+
+#content .career_item.active>.career_link .career_more{
+    border-color: var(--color-white);
+}
+
+#content .career_item.active>.career_link .career_more_plus{
+    display: none;
+}
+
+#content .career_item.active>.career_link .career_more_minus{
+    display: block;
+}
+
+/* ===== 펼침 패널 ===== */
+#content .career_detail{
+    width: 1400px;
+    padding: 46px 54px;
+    box-sizing: border-box;
+    border: 1px solid #DDE1E7;
+    border-top: 0;
+    border-left: 6px solid var(--color-main-01);
+    background: #F5F7FA;
+}
+
+/* 대분류 상세 헤더 */
+#content .career_head{
+    width: 1286px;
+    height: 152px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+#content .detail_icon{
+    width: 132px;
+    height: 132px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    border: 2px solid var(--color-main-01);
+    border-radius: 14px;
+    background: var(--color-white);
+    overflow: hidden;
+}
+
+#content .detail_icon img{
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+}
+
+#content .career_head_txt{
+    width: 650px;
+    min-height: 130px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+#content .career_head_txt>strong{
+    display: block;
+    color: #141417;
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+#content .career_head_txt>p{
+    color: #2E3036;
+    font-size: var(--font-label-large-size);
+    font-weight: 400;
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+#content .career_head_en{
+    width: 440px;
+    margin-left: auto;
+    color: #E1E4E9;
+    font-family: var(--font-family-en);
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: right;
+    letter-spacing: 0;
+}
+
+/* 세부직무 제목 */
+#content .role_title{
+    width: 1286px;
+    height: 63px;
+    margin: 30px 0 0;
+    padding-top: 30px;
+    box-sizing: border-box;
+    border-top: 1px solid #DDE1E7;
+}
+
+#content .role_title strong{
+    display: block;
+    color: #141417;
+    font-size: var(--font-label-large-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* 세부 직무 카드 */
+#content .role_list{
+    width: 1286px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+#content .role_list>li{
+    width: 388px;
+    flex-shrink: 0;
+}
+
+#content .role_list a{
+    width: 388px;
+    height: 182px;
+    padding: 22px 26px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    box-sizing: border-box;
+    border: 1px solid #DDE1E7;
+    border-radius: 12px;
+    background: var(--color-white);
+}
+
+#content .role_list a>strong>span:first-child{
+    display: block;
+    width: 100px;
+    color: #747A84;
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+#content .role_list a>strong{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    width: 260px;
+    color: #141417;
+    font-size: var(--font-h6-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+#content .role_list a>strong>.role_en{
+    display: block;
+    width: 310px;
+    color: #747A84;
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.1;
+    letter-spacing: 0;
+}
+
+#content .role_list>li.active a{
+    border-color: #0E0F12;
+    background: var(--color-point-01);
+}
+
+#content .role_list>li.active a>strong>span:first-child{
+    color: var(--color-main-01);
+}
+
+#content .role_list>li.active a>strong{
+    color: var(--color-white);
+}
+
+#content .role_list>li.active a>strong>.role_en{
+    color: #C9CDD5;
+}
+
+/* 안전처럼 세부직무가 2개여도 카드 크기는 동일하게 유지 */
+#content .role_list_two>li,
+#content .role_list_two a{
+    width: 388px;
+}
+
+/* ===== 선택된 세부 직무 상세 ===== */
+#content .role_contents{
+    width: 1286px;
+    margin-top: 30px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    border-top: 1px solid #DDE1E7;
+}
+
+#content .role_content{
+    display: none;
+}
+
+#content .role_content.active{
+    width: 100%;
+    min-height: 205px;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+}
+
+#content .role_summary{
+    width: 25%;
+    min-height: 200px;
+    padding: 0 24px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+    box-sizing: border-box;
+}
+
+#content .role_summary>strong>span,
+#content .role_info dt strong>span{
+    display: block;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 600;
+    line-height: 1.8;
+    letter-spacing: 0;
+}
+
+#content .role_summary>strong{
+    display: block;
+    width: 100%;
+    color: var(--color-font-01);
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+#content .role_summary>p{
+    width: 100%;
+    margin: 0;
+    color: #2E3036;
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+#content .role_info{
+    width: 75%;
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+}
+
+#content .role_info>div{
+    width: 33.333%;
+    min-height: 190px;
+    padding: 0 24px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    border-left: 1px solid #DDE1E7;
+}
+
+#content .role_info dt{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+#content .role_info dt strong{
+    display: block;
+    color: var(--color-font-01);
+    font-size: var(--font-body-large-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+#content .role_info dd{
+    margin-top: 25px;
+}
+
+#content .role_info dd li{
+    padding: 0;
+    color: #747A84;
+    font-size: var(--font-body-small-size);
+    font-weight: 400;
+    line-height: 1.9;
+    word-break: keep-all;
+}
+
+#content .role_info dd li::before{
+    display: none;
+}
+
+/* ===== 02. JOIN KUMHO E&C ===== */
+#content .recruit_cta{
+    width: 100vw;
+    height: 387px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #141417;
+    color: var(--color-white);
+}
+
+#content .recruit_cta_inner{
+    width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+#content .recruit_cta_tit{
+    width: 720px;
+    min-height: 170px;
+    margin: 0;
+    color: var(--color-white);
+    font-size: var(--font-display-small-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+#content .recruit_cta_tit>span{
+    display: block;
+    width: 280px;
+    margin-bottom: 22px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: 0;
+}
+
+#content .recruit_cta_tit>span::after{
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin-top: 10px;
+    background: var(--color-main-01);
+}
+
+#content .recruit_cta_link{
+    width: 430px;
+}
+
+#content .recruit_cta_link a{
+    width: 420px;
+    padding-bottom: 16px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #55585F;
+    color: var(--color-white);
+    font-size: var(--font-label-large-size);
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+#content .recruit_cta_link a span{
+    margin-left: 6px;
+}

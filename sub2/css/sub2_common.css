@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/* 사업분야 depth 공통 영역 */
+
+/* ===== 서브 비주얼 영역 ===== */
+
+.visual{
+    height: 400px;
+    margin-top: 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+.visual > img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.visual .visual_txt{
+    width: 720px;
+    position: absolute;
+    top: 126px;
+    left: max(30px, calc(50% - 700px));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--color-white);
+    word-break: keep-all;
+}
+
+.visual .visual_en{
+    width: 100%;
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+.visual .visual_txt strong{
+    width: 100%;
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.visual .visual_ko{
+    width: 100%;
+    font-size: var(--font-label-large-size);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* ===== 사업분야 서브메뉴 ===== */
+
+.sub_nav{
+    height: 76px;
+    padding: 8px 0;
+    box-sizing: border-box;
+}
+
+.sub_nav ul{
+    width: 1000px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 11px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-sub-01);
+    border-radius: 100px;
+}
+
+.sub_nav ul li{
+    width: 170px;
+    text-align: center;
+}
+
+.sub_nav ul li a{
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--color-font-01);
+    font-size: var(--font-label-large-size);
+    font-weight: 700;
+    line-height: 1;
+    border-radius: 50px;
+    transition: color .5s ease-out, background-color .5s ease-out;
+}
+
+.sub_nav ul li:hover a,
+.sub_nav ul li .active{
+    color: var(--color-sub-02);
+    background: var(--color-main-01);
+}
+
+/* ===== 본문 타이틀 영역 ===== */
+
+#content{
+    width: 100%;
+}
+
+#content .title_area{
+    width: 1400px;
+    margin: 0 auto;
+    padding: 150px 0;
+    position: relative;
+}
+
+#content .title_area .line_map{
+    position: absolute;
+    right: 0;
+    top: 40px;
+    font-size: var(--font-label-small-size);
+    line-height: 1.5;
+}
+
+#content .title_area h2{
+    text-align: center;
+    color: var(--color-main-02);
+    font-size: var(--font-h2-size);
+    font-weight: 700;
+    line-height: 1;
+}
+
+#content .title_area h2 .title_main{
+    display: inline-block;
+    position: relative;
+}
+
+#content .title_area h2 .title_main img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: calc(100% - 1px);
+    top: -25px;
+    object-fit: contain;
+}
+
+#content .title_area h2 .title_en{
+    margin-top: 20px;
+    display: block;
+    color: var(--color-font-02);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 400;
+    line-height: 1.5;
+}

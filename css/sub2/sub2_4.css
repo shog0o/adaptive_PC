@@ -1,0 +1,326 @@
+@charset "UTF-8";
+
+/* sub2_4 사업실적 */
+#content .content_area {
+    background: var(--color-white);
+}
+
+/* 섹션 제목 공통 */
+#content .sec_label {
+    display: block;
+    margin-bottom: 18px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+#content .sec_tit,
+#content .result_title_inner h3 {
+    color: var(--color-font-01);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+/* 01 프로젝트 검색 */
+#content .project_search {
+    padding: 56px 6%;
+}
+
+#content .project_search_box {
+    display: flex;
+    align-items: center;
+    height: 52px;
+    margin-top: 24px;
+    padding: 0 14px 0 18px;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: var(--color-white);
+}
+
+#content .project_search_box:focus-within {
+    border-color: var(--color-main-01);
+}
+
+#content .project_search_box input {
+    min-width: 0;
+    height: 100%;
+    flex: 1;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--color-font-01);
+    font-size: var(--font-body-medium-size);
+}
+
+#content .project_search_box input::placeholder {
+    color: var(--color-font-03);
+    opacity: 1;
+}
+
+#content .search_btn {
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: var(--color-font-01);
+    font-size: var(--font-h5-size);
+    cursor: pointer;
+}
+
+#content .filter_chip_box {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+#content .filter_chip {
+    min-width: 0;
+    height: 44px;
+    flex: 1;
+    padding: 0;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: var(--color-white);
+    color: var(--color-font-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#content .filter_chip.active {
+    border-color: var(--color-main-01);
+    background: var(--color-main-01);
+    color: var(--color-white);
+}
+
+#content .filter_control {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 18px;
+}
+
+#content .filter_region {
+    position: relative;
+}
+
+#content .filter_region::after {
+    content: '';
+    position: absolute;
+    top: 9px;
+    right: 2px;
+    width: 7px;
+    height: 7px;
+    border-right: 1px solid var(--color-font-02);
+    border-bottom: 1px solid var(--color-font-02);
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+#content .filter_region select,
+#content .result_sort select {
+    appearance: none;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+}
+
+#content .filter_region select {
+    padding-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 02 프로젝트 목록 */
+#content .project_results {
+    padding: 56px 6% 72px;
+    background: var(--color-white);
+}
+
+#content .result_title_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#content .result_count {
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+}
+
+#content .result_sort {
+    display: none;
+}
+
+#content .project_list {
+    margin-top: 24px;
+}
+
+#content .project_list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-height: 118px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--color-light-gray);
+    box-sizing: border-box;
+}
+
+#content .project_list li:last-child {
+    border-bottom: 0;
+}
+
+#content .project_img {
+    width: 96px;
+    height: 96px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 12px;
+    background: var(--color-white);
+}
+
+#content .project_img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#content .project_info {
+    min-width: 0;
+    flex: 1;
+}
+
+#content .project_category,
+#content .project_name,
+#content .project_meta span {
+    display: block;
+}
+
+#content .project_category {
+    color: var(--color-main-01);
+    font-size: var(--font-body-small-size);
+    font-weight: 700;
+    line-height: 1.45;
+}
+
+#content .project_name {
+    margin-top: 5px;
+    color: var(--color-font-01);
+    font-size: var(--font-body-large-size);
+    font-weight: 700;
+    line-height: 1.45;
+    word-break: keep-all;
+}
+
+#content .project_meta {
+    margin-top: 5px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-small-size);
+    line-height: 1.5;
+}
+
+#content .project_list .no_result {
+    justify-content: center;
+    min-height: 160px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+}
+
+#content .project_more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 50px;
+    margin-top: 28px;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 12px;
+    background: var(--color-white);
+    color: var(--color-font-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#content .project_more span {
+    margin-left: 8px;
+    font-size: var(--font-h5-size);
+}
+
+#content .project_more[hidden] {
+    display: none;
+}
+
+@media screen and (min-width: 500px) {
+    #content .project_search,
+    #content .project_results {
+        padding-top: 72px;
+        padding-bottom: 80px;
+    }
+
+    #content .project_img {
+        width: 112px;
+        height: 112px;
+    }
+}
+/* 프로젝트 검색어 힌트 */
+#content .project_search_box {
+    position: relative;
+    z-index: 2;
+}
+
+#content .project_search_box .search_hints {
+    position: absolute;
+    z-index: 10;
+    top: calc(100% + 6px);
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 10px;
+    box-sizing: border-box;
+    background: var(--color-white);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, .1);
+}
+
+#content .project_search_box .search_hints li + li {
+    border-top: 1px solid var(--color-sub-01);
+}
+
+#content .project_search_box .search_hints button {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 16px;
+    border: 0;
+    background: var(--color-white);
+    color: var(--color-font-01);
+    font-size: var(--font-body-small-size);
+    line-height: 1.5;
+    text-align: left;
+    cursor: pointer;
+}
+
+#content .project_search_box .search_hints button:hover,
+#content .project_search_box .search_hints button:focus {
+    background: var(--color-sub-01);
+}

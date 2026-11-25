@@ -1,0 +1,16 @@
+{
+    "project": [
+        {"Name":"HK inno.N 판교연구소","Category":"architecture","CategoryName":"건축","Region":"gyeonggi","Location":"경기도 성남시 수정구","Image":"./images/sub1/architecture_01.png"},
+        {"Name":"경기신용보증재단 사옥","Category":"architecture","CategoryName":"건축","Region":"gyeonggi","Location":"경기도 수원시 영통구","Image":"./images/sub1/architecture_02.webp"},
+        {"Name":"센터원","Category":"architecture","CategoryName":"건축","Region":"seoul","Location":"서울특별시 중구 수하동","Image":"./images/sub1/architecture_03.png"},
+        {"Name":"인천국제공항 4단계 계류장","Category":"civil","CategoryName":"토목","Region":"incheon","Location":"인천광역시 중구","Image":"./images/sub2/civil_01.png"},
+        {"Name":"광양항 낙포부두 개축","Category":"civil","CategoryName":"토목","Region":"jeonnam","Location":"전라남도 여수시","Image":"./images/sub2/civil_02.png"},
+        {"Name":"부산 에코델타시티 조성","Category":"civil","CategoryName":"토목","Region":"busan","Location":"부산광역시 강서구","Image":"./images/sub2/civil_03.png"},
+        {"Name":"한남 더힐","Category":"housing","CategoryName":"주택","Region":"seoul","Location":"서울특별시 용산구","Image":"./images/sub3/housing_01.webp"},
+        {"Name":"여주역 금호어울림 베르티스","Category":"housing","CategoryName":"주택","Region":"gyeonggi","Location":"경기도 여주시","Image":"./images/sub3/housing_02.webp"},
+        {"Name":"검단 금호어울림 센트럴","Category":"housing","CategoryName":"주택","Region":"incheon","Location":"인천광역시 서구","Image":"./images/sub3/housing_03.png"},
+        {"Name":"DMC 금호 리첸시아","Category":"housing","CategoryName":"주택","Region":"ulsan","Location":"울산광역시 남구 봉월로60번길 10","Image":"./images/sub4/complex_dmc_ricenzia.webp"},
+        {"Name":"동탄 아테라 파밀리에","Category":"housing","CategoryName":"주택","Region":"gyeonggi","Location":"경기도 화성시 동탄구 동탄신리천로3길 59","Image":"./images/sub4/complex_dongtan_artera.webp"},
+        {"Name":"부천 중동 리첸시아","Category":"housing","CategoryName":"주택","Region":"gyeonggi","Location":"경기도 부천시 원미구 옥산로 7","Image":"./images/sub4/complex_bucheon_ricenzia.webp"}
+    ]
+}

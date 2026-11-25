@@ -1,0 +1,796 @@
+@charset "UTF-8";
+
+#content .content_area {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/* ===== 공통 section title ===== */
+
+#content .section_title{
+    height: 150px;
+    position: relative;
+}
+
+#content .section_title h3{
+    padding-top: 70px;
+    font-size: var(--font-display-medium-size);
+    line-height: 1.1;
+}
+
+#content .section_title h3 > span{
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-large-size);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+#content .section_title h3 > span::after{
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin-top: 10px;
+    border-radius: 2px;
+    background: var(--color-main-01);
+}
+
+/* ===== 01 연구개발 개요 ===== */
+
+#content .rnd_overview{
+    height: 745px;
+    position: relative;
+}
+
+#content .rnd_overview::before{
+    content: 'R&D';
+    position: absolute;
+    left: -90px;
+    top: 0;
+    color: var(--color-sub-01);
+    font-family: var(--font-family-en);
+    font-size: 180px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+#content .rnd_overview .section_title{
+    height: 0;
+    margin: 0;
+    position: static;
+    z-index: 1;
+}
+
+#content .rnd_overview .section_title h3{
+    padding: 0;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    color: var(--color-font-01);
+    font-size: var(--font-display-medium-size);
+    line-height: 1.4;
+    z-index: 1;
+}
+
+#content .rnd_overview .section_title h3 > span{
+    left: -5px;
+    top: -80px;
+    font-size: var(--font-body-large-size);
+    line-height: 1.5;
+}
+
+#content .rnd_overview .section_title h3 > span::after{
+    margin-top: 10px;
+}
+
+#content .overview_text{
+    width: 570px;
+    position: absolute;
+    left: 0;
+    top: 175px;
+    z-index: 1;
+}
+
+#content .overview_title{
+    display: block;
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .overview_text > p{
+    margin-top: 35px;
+    color: var(--color-font-02);
+    font-size: var(--font-label-large-size);
+    line-height: 1.9;
+    word-break: keep-all;
+}
+
+#content .rnd_approach{
+    width: 500px;
+    margin-top: 70px;
+}
+
+#content .rnd_approach > strong{
+    display: block;
+    color: var(--color-font-03);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+#content .rnd_approach dl{
+    margin-top: 5px;
+}
+
+#content .rnd_approach dl > div{
+    display: flex;
+    align-items: center;
+    height: 55px;
+    border-bottom: 1px solid #e0e0e3;
+    box-sizing: border-box;
+}
+
+#content .rnd_approach dl > div:last-child{
+    border-bottom: 0;
+}
+
+#content .rnd_approach dt{
+    width: 40px;
+    flex-shrink: 0;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-large-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .rnd_approach dd{
+    font-size: var(--font-label-large-size);
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+#content .rnd_approach dd:hover{
+    color: var(--color-main-01);
+    transition: all .3s ease-in;
+}
+
+#content .overview_visual{
+    width: 705px;
+    height: 530px;
+    position: absolute;
+    left: 700px;
+    top: 90px;
+    z-index: 1;
+}
+
+#content .overview_visual img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+#content .overview_visual > p{
+    width: 260px;
+    height: 260px;
+    padding: 55px 35px;
+    position: absolute;
+    right: -75px;
+    bottom: -45px;
+    box-sizing: border-box;
+    background: var(--color-main-01);
+    color: var(--color-white);
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+/* ===== 02 핵심 연구영역 ===== */
+
+#content .research_domains{
+    width: 1920px;
+    height: 1080px;
+    margin-left: -260px;
+    position: relative;
+    z-index: 0;
+    transition: height .3s ease;
+}
+
+/* 연구영역 상세 탭이 열리면 배경과 다음 섹션 사이의 영역도 함께 확장 */
+#content .research_domains.open{
+    height: 1580px;
+}
+
+#content .research_domains::before{
+    content: '';
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: -1;
+    transform: translateX(-50%);
+    background: #0e0e0f;
+}
+
+#content .featured_title{
+    width: 300px;
+    height: 300px;
+    padding: 50px 25px;
+    position: absolute;
+    left: 95px;
+    top: 150px;
+    box-sizing: border-box;
+    background: var(--color-main-01);
+    color: var(--color-white);
+    font-size: var(--font-display-medium-size);
+    line-height: 1.7;
+}
+
+#content .research_domains .section_title{
+    height: 0;
+    position: static;
+}
+
+#content .research_domains .section_title h3{
+    padding: 0;
+    position: absolute;
+    left: 545px;
+    top: 185px;
+    color: var(--color-white);
+    font-size: var(--font-display-medium-size);
+    line-height: 1.4;
+}
+
+#content .research_domains .section_title h3 > span{
+    left: 0;
+    top: -35px;
+    color: #adadb2;
+    font-size: var(--font-body-large-size);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 1.4px;
+}
+
+#content .research_domains .section_title h3 > span::after{
+    display: none;
+}
+
+#content .focus_keyword{
+    position: absolute;
+    left: 545px;
+    top: 290px;
+    color: var(--color-font-02);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-small-size);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: .65px;
+}
+
+#content .focus_keyword strong{
+    color: var(--color-main-01);
+    font-weight: 500;
+}
+
+#content .domain_list > li{
+    width: 650px;
+    position: absolute;
+    top: 370px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+#content .domain_list > li:first-child{
+    left: 260px;
+}
+
+#content .domain_list > li:last-child{
+    left: 1020px;
+}
+
+#content .domain_image{
+    width: 650px;
+    height: 320px;
+    overflow: hidden;
+}
+
+#content .domain_image img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+#content .domain_list > li:last-child .domain_image img{
+    width: 107.35%;
+    height: 112.5%;
+    position: relative;
+    left: -3.68%;
+    top: -12.5%;
+}
+
+#content .domain_summary{
+    height: 200px;
+    padding: 25px 35px 25px 110px;
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    background: var(--color-dark-gray);
+    color: var(--color-white);
+}
+
+#content .domain_list > li:last-child .domain_summary{
+    background: var(--color-main-01);
+}
+
+#content .domain_number{
+    position: absolute;
+    left: 35px;
+    top: 25px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-large-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+#content .domain_list > li:last-child .domain_number{
+    color: var(--color-white);
+}
+
+/* 아코디언이 열린 카드의 배경색과 번호 색상을 서로 반대로 전환 */
+#content .domain_summary{
+    transition: background-color .3s ease;
+}
+
+#content .domain_number{
+    transition: color .3s ease;
+}
+
+#content .domain_list > li:first-child.active .domain_summary{
+    background: var(--color-main-01);
+}
+
+#content .domain_list > li:first-child.active .domain_number{
+    color: var(--color-white);
+}
+
+#content .domain_list > li:last-child.active .domain_summary{
+    background: var(--color-dark-gray);
+}
+
+#content .domain_list > li:last-child.active .domain_number{
+    color: var(--color-main-01);
+}
+
+#content .domain_en{
+    display: block;
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-small-size);
+    font-weight: 700;
+    line-height: 1.6;
+    letter-spacing: 1px;
+}
+
+#content .domain_summary h4{
+    margin-top: 10px;
+    font-size: var(--font-h5-size);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+#content .domain_summary > p{
+    margin-top: 5px;
+    font-size: var(--font-body-medium-size);
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+#content .domain_list > li:first-child .domain_summary > p{
+    width: 400px;
+}
+
+#content .domain_more{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 25px;
+    top: 75px;
+}
+
+#content .domain_more img{
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#content .domain_more img:first-child{
+    width: 30px;
+    height: 30px;
+}
+
+#content .domain_more img:nth-child(2){
+    width: 20px;
+    height: auto;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#content .domain_details{
+    display: none;
+    height: 530px;
+    margin-top: -30px;
+    padding: 50px 35px 0;
+    position: relative;
+    box-sizing: border-box;
+    background: var(--color-sub-01);
+}
+
+#content .domain_details > strong{
+    display: block;
+    color: var(--color-font-02);
+    font-size: var(--font-body-xlarge-size);
+    line-height: 1.3;
+}
+
+#content .domain_details dl{
+    margin-top: 40px;
+}
+
+#content .domain_details dl > div{
+    height: 80px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #c9cacc;
+    box-sizing: border-box;
+}
+
+#content .domain_details dt{
+    font-size: var(--font-label-large-size);
+    font-weight: 700;
+    line-height: 1.7;
+    white-space: nowrap;
+}
+
+#content .domain_details dt span{
+    margin-right: 20px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+}
+
+#content .domain_details dd{
+    color: var(--color-font-02);
+    font-size: var(--font-body-small-size);
+    line-height: 2.1;
+    white-space: nowrap;
+}
+
+/* ===== 03 기술인증 현황 ===== */
+
+#content .technology_certifications{
+    height: 1490px;
+    margin-bottom: 200px;
+    position: relative;
+}
+
+#content .technology_certifications .section_title{
+    height: auto;
+    position: static;
+}
+
+#content .technology_certifications .section_title h3{
+    padding-top: 200px;
+    font-size: var(--font-display-medium-size);
+    line-height: 1.4;
+}
+
+#content .technology_certifications .section_title h3 > span{
+    left: -5px;
+    top: 145px;
+    font-size: var(--font-body-large-size);
+    line-height: 1.3;
+}
+
+#content .technology_certifications .section_title .intro{
+    position: absolute;
+    left: 0;
+    top: 285px;
+    color: var(--color-font-02);
+    font-size: var(--font-label-large-size);
+    line-height: 1.7;
+}
+
+/* ========================================
+   기술성과 필터
+======================================== */
+
+#content .certification_filter{
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    position: absolute;
+    left: 0;
+    top: 340px;
+}
+
+#content .certification_filter li{
+    width: auto;
+    margin: 0;
+}
+
+#content .certification_filter a{
+    display: block;
+    position: relative;
+    padding: 0 5px 14px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    font-weight: 500;
+    line-height: 1.4;
+    transition:
+        color .3s ease,
+        font-weight .3s ease;
+}
+
+#content .certification_filter a:hover,
+#content .certification_filter a.active{
+    color: var(--color-main-01);
+    font-weight: 700;
+}
+
+#content .certification_filter a.active::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--color-main-01);
+}
+
+/* ========================================
+   기술성과 테이블
+======================================== */
+
+#content .certification_table_wrap{
+    width: 1400px;
+    position: absolute;
+    left: 0;
+    top: 420px;
+}
+
+#content .certification_table{
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#content .certification_table th,
+#content .certification_table td{
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    word-break: keep-all;
+}
+
+/* 테이블 열 너비 */
+
+#content .certification_table tr > *:nth-child(1){
+    width: 200px;
+    text-align: center;
+}
+
+#content .certification_table tr > *:nth-child(2){
+    width: 620px;
+}
+
+#content .certification_table tr > *:nth-child(3){
+    width: 300px;
+}
+
+#content .certification_table tr > *:nth-child(4){
+    width: 280px;
+}
+
+/* 테이블 헤더 */
+
+#content .certification_table thead tr{
+    height: 75px;
+    background: var(--color-black);
+}
+
+#content .certification_table thead th{
+    color: var(--color-white);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/* 테이블 본문 */
+
+#content .certification_table tbody tr{
+    height: 110px;
+    border-bottom: 1px solid #d6d6d9;
+    background: var(--color-white);
+}
+
+#content .certification_table tbody tr:nth-child(even){
+    background: var(--color-sub-01);
+}
+
+/* JavaScript에서 숨긴 행 */
+
+#content .certification_table tbody tr[hidden]{
+    display: none;
+}
+
+/* 첫 번째 열: 기술 분류 */
+
+#content .certification_table tbody th{
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* 건설기술 */
+
+#content .certification_table tbody
+tr[data-category="construction"] th{
+    color: var(--color-main-01);
+}
+
+/* 환경기술 */
+
+#content .certification_table tbody
+tr[data-category="environment"] th{
+    color: #1a7a47;
+}
+
+/* 특허기술 */
+
+#content .certification_table tbody
+tr[data-category="patent"] th{
+    color: var(--color-point-01);
+}
+
+/* 두 번째 열: 기술명 */
+
+#content .certification_table tbody td:nth-child(2){
+    color: var(--color-font-01);
+    font-size: var(--font-label-large-size);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* 세 번째·네 번째 열 */
+
+#content .certification_table tbody td:nth-child(3),
+#content .certification_table tbody td:nth-child(4){
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* 날짜 */
+
+#content .certification_table time{
+    font-family: var(--font-family-en);
+}
+
+/* 페이지네이션 */
+
+#content .certification_pagination{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    left: 50%;
+    top: 1185px;
+    transform: translateX(-50%);
+}
+
+#content .certification_pagination ul{
+    display: flex;
+    gap: 10px;
+}
+
+#content .certification_pagination a{
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-sizing: border-box;
+    color: var(--color-font-02);
+    font-size: var(--font-label-large-size);
+    line-height: 1.5;
+    transition: color .3s ease, background-color .3s ease;
+}
+
+#content .certification_pagination ul a{
+    width: 40px;
+}
+
+#content .certification_pagination ul a:hover,
+#content .certification_pagination ul a.active{
+    background: var(--color-main-01);
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+#content .certification_pagination .page_prev,
+#content .certification_pagination .page_next{
+    gap: 5px;
+    padding: 0 5px;
+}
+
+#content .certification_pagination .page_prev{
+    color: var(--color-font-03);
+}
+
+#content .certification_pagination .page_prev:hover,
+#content .certification_pagination .page_next:hover{
+    color: var(--color-main-01);
+}
+
+#content .certification_pagination .page_prev.disabled,
+#content .certification_pagination .page_next.disabled{
+    color: var(--color-font-03);
+    cursor: default;
+    opacity: .45;
+}
+
+#content .certification_pagination img{
+    width: 20px;
+    height: 20px;
+}
+
+#content .certification_note{
+    position: absolute;
+    left: 0;
+    top: 1300px;
+    color: var(--color-font-03);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.6;
+}
+
+#content .research_message{
+    width: 1400px;
+    height: 110px;
+    position: absolute;
+    left: 0;
+    top: 1355px;
+    background: var(--color-main-01);
+}
+
+#content .research_message p:first-child{
+    position: absolute;
+    left: 40px;
+    top: 35px;
+    color: #ffc7cc;
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 1px;
+}
+
+#content .research_message p:last-child{
+    position: absolute;
+    right: 70px;
+    top: 30px;
+    color: var(--color-white);
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    line-height: 1.5;
+}

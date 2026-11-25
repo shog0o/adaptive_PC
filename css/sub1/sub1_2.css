@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+/* sub1_2 연혁 전용 스타일 */
+#content .all_history {
+    padding: 56px 6%;
+    background: var(--color-white);
+}
+
+/* 전체 연혁 제목 영역 */
+#content .all_history .section_title {
+    margin-bottom: 32px;
+}
+
+#content .section_title h3 {
+    margin: 0;
+    color: var(--color-font-01);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.55;
+}
+
+#content .section_title h3 span {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+#content .section_title .intro {
+    margin: 24px 0 0;
+    color: var(--color-font-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.75;
+    text-align: start;
+    word-break: break-all;
+}
+
+/* 화면 너비에 따라 소개문이 자연스럽게 줄바꿈되도록 한다. */
+#content .section_title .intro br {
+    display: none;
+}
+
+/* 기간 선택 탭 */
+#content .history_tabs {
+    display: flex;
+    height: 75px;
+    margin-bottom: 70px;
+}
+
+#content .history_tabs li {
+    position: relative;
+    width: 25%;
+    height: 75px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d1d4d9;
+}
+
+#content .history_tabs a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 75px;
+    box-sizing: border-box;
+    border-bottom: 4px solid transparent;
+    color: var(--color-font-03);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-large-size);
+    font-weight: 400;
+    transition: color .3s ease, font-weight .3s ease, border-color .3s ease;
+}
+
+#content .history_tabs a.active {
+    border-bottom-color: var(--color-main-01);
+    color: var(--color-font-01);
+    font-weight: 700;
+}
+
+#content .history_tabs li:hover a {
+    border-bottom-color: var(--color-main-01);
+    color: var(--color-font-01);
+    font-weight: 700;
+}
+
+/* 기간별 연혁 패널 */
+#content .history_panel {
+    width: 100%;
+}
+
+#content .history_panel > h4 {
+    margin: 0 0 28px;
+    color: var(--color-font-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-h3-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+#content .history_panel > h4 > span {
+    display: block;
+    margin-top: 8px;
+    color: var(--color-font-02);
+    font-family: var(--font-family-kr);
+    font-size: var(--font-body-medium-size);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+/* 연도별 연혁 목록 */
+#content .history_list {
+    position: relative;
+    width: 100%;
+}
+
+#content .history_list > .history_item {
+    position: relative;
+    width: 100%;
+    min-height: 82px;
+}
+
+#content .history_list > .history_item > dt {
+    position: absolute;
+    left: 0;
+    top: 18px;
+    width: 25%;
+    color: var(--color-font-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+#content .history_list > .history_item > dd {
+    min-height: 25%;
+    margin: 0 0 0 15%;
+    padding: 18px 20px ;
+    box-sizing: border-box;
+    border-top: 1px solid #d1d4d9;
+}
+
+#content .history_list > .history_item:last-child > dd {
+    border-bottom: 1px solid #d1d4d9;
+}
+
+#content .history_list > .history_item > dd > ul > li {
+    display: flex;
+    align-items: flex-start;
+    min-height: 26px;
+}
+
+#content .history_list > .history_item > dd > ul > li + li {
+    margin-top: 8px;
+}
+
+#content .history_list > .history_item .month {
+    width: 20px;
+    flex-shrink: 0;
+    color: var(--color-font-03);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 600;
+    line-height: 1.75;
+    padding-right: 20px;
+}
+
+#content .history_list > .history_item > dd > ul > li > p {
+    flex: 1;
+    color: var(--color-main-02);
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.75;
+    word-break: break-all;
+}
+
+#content .history_highlight {
+    color: var(--color-font-01);
+    font-weight: 700;
+}
+
+@media screen and (min-width: 500px) {
+    #content .all_history {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+}

@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+/* sub4_1 복리후생: 모바일 본문 공통 */
+#content .content_area {
+    width: 100%;
+    background: var(--color-white);
+}
+
+#content .bnft_sum,
+#content .bnft_culture {
+    padding: 56px 6%;
+    box-sizing: border-box;
+}
+
+/* 섹션 번호는 왼쪽, 한글 제목과 소개 문장은 가운데 정렬한다. */
+#content .sec_tit {
+    margin: 0;
+    color: var(--color-font-01);
+    font-weight: 700;
+    word-break: keep-all;
+}
+
+#content .sec_label {
+    display: block;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .heading_text {
+    display: block;
+    margin-top: 24px;
+    font-size: var(--font-h4-size);
+    line-height: 1.5;
+    text-align: center;
+}
+
+#content .sec_desc {
+    margin-top: 20px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.75;
+    text-align: center;
+    word-break: keep-all;
+}
+
+/* 01. 근무·건강·성장·가족: 화면 너비에 맞춰 2열을 유지한다. */
+#content .bnft_list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+#content .bnft_list > li {
+    width: calc(50% - 8px);
+    min-width: 0;
+    padding: 22px 10px;
+    box-sizing: border-box;
+    border: 1px solid #e1e3e9;
+    background: var(--color-white);
+    text-align: center;
+}
+
+/* 미리 준비된 SVG 아이콘을 같은 크기와 비율로 표시한다. */
+#content .bnft_icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+}
+
+#content .bnft_icon img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* 기존 아이콘 AOS는 가볍게 나타나는 효과로 유지한다. */
+#content .bnft_icon img[data-aos="icon-pop"] {
+    opacity: 0;
+    transform: scale(.9);
+    transition-property: opacity, transform;
+}
+
+#content .bnft_icon img[data-aos="icon-pop"].aos-animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#content .bnft_list dt {
+    color: var(--color-font-01);
+    font-size: var(--font-h6-size);
+    font-weight: 700;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+#content .bnft_list dt span {
+    display: block;
+    margin: 12px 0 10px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .bnft_list dd {
+    margin-top: 12px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-small-size);
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+/* 02. 문화 소개: 배경은 화면 전체 너비로 표시한다. */
+#content .bnft_culture {
+    background: #202228;
+}
+
+#content .bnft_culture .sec_tit,
+#content .bnft_culture .sec_desc {
+    color: var(--color-white);
+}
+
+#content .bnft_culture .heading_text {
+    margin-top: 16px;
+}
+
+/* 하단 운영 기준 안내 */
+#content .bnft_note {
+    margin: 0;
+    padding: 28px 6%;
+    color: var(--color-font-02);
+    background: var(--color-white);
+    font-size: var(--font-label-small-size);
+    line-height: 1.6;
+    text-align: center;
+    word-break: keep-all;
+}
+
+/* 넓은 모바일 화면에서도 기존 서브 페이지의 여백 기준을 따른다. */
+@media screen and (min-width: 500px) {
+    #content .bnft_sum,
+    #content .bnft_culture {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    #content .bnft_list {
+        gap: 24px;
+        margin-top: 32px;
+    }
+
+    #content .bnft_list > li {
+        width: calc(50% - 12px);
+        padding: 28px 20px;
+    }
+
+    #content .bnft_list dt {
+        font-size: var(--font-h5-size);
+    }
+
+    #content .bnft_list dd {
+        font-size: var(--font-body-medium-size);
+    }
+
+    #content .bnft_note {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+}

@@ -1,0 +1,462 @@
+@charset "UTF-8";
+
+/* sub1_3 기술혁신 전용 스타일 */
+#content .rnd_overview,
+#content .research_domains,
+#content .technology_certifications {
+    padding: 56px 6%;
+}
+
+#content .rnd_overview,
+#content .technology_certifications {
+    background: var(--color-white);
+}
+
+#content .research_domains {
+    background: var(--color-sub-01);
+}
+
+/* 각 콘텐츠 제목 */
+#content .section_title h3 {
+    margin: 0;
+    color: var(--color-font-01);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.55;
+}
+
+#content .section_title h3 span {
+    display: block;
+    margin-bottom: 20px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+#content .section_title p {
+    margin: 24px 0 0;
+    color: var(--color-font-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.75;
+    word-break: break-all;
+}
+
+#content .rnd_overview .section_title p {
+    text-align: center;
+}
+
+/* 연구개발 개요 */
+#content .overview_image {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 24px;
+    border-radius: 8px 8px 0 0;
+}
+
+#content .rnd_approach {
+    padding: 16px 10px 32px ;
+    background: var(--color-sub-01);
+    margin-top: 20px;
+}
+
+#content .rnd_approach > strong {
+    display: block;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    line-height: 1.3;
+    text-align: center;
+}
+
+#content .rnd_approach dl {
+    display: flex;
+    margin-top: 16px;
+}
+
+#content .rnd_approach dl div {
+    width: 33.33%;
+    text-align: center;
+}
+
+#content .rnd_approach dt,
+#content .rnd_approach dd {
+    color: var(--color-font-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* 핵심 연구영역 */
+#content .domain_list {
+    margin-top: 34px;
+}
+
+#content .domain_list > li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+#content .domain_list > li:nth-child(2) {
+    align-items: flex-end;
+}
+
+#content .domain_list > li + li {
+    margin-top: 48px;
+}
+
+#content .domain_image {
+    width: 100%;
+    height: 136px;
+    overflow: hidden;
+    border-radius: 7px;
+    transition: height .3s ease;
+}
+
+#content .domain_image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#content .domain_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 53px;
+    box-sizing: border-box;
+}
+/* 두 번째 카드는 정보영역을 오른쪽 정렬한다. */
+#content .domain_list > li:nth-child(2) .domain_info {
+    min-height: 63px;
+    align-items: flex-end;
+    text-align: right;
+}
+
+#content .domain_list > li:nth-child(2) .domain_more {
+    flex-direction: row-reverse;
+}
+
+/* 연구영역 제목 */
+#content .domain_name span {
+    display: block;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-top: 10px;
+}
+
+#content .domain_name strong {
+    display: block;
+    margin-top: 3px;
+    color: var(--color-font-01);
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    line-height: 1.45;
+}
+/* 자세히보기를 누르면 이미지 높이가 줄고 설명문이 펼쳐진다. */
+#content .domain_list > li.open .domain_image {
+    width: 100%;
+    height: 100px;
+}
+
+#content .domain_list > li.open {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+}
+
+/* 펼친 상태는 제목만 아이콘 옆에 두고 설명문은 이미지와 같은 폭으로 맞춘다. */
+#content .domain_list > li.open .domain_info {
+    display: grid;
+    grid-template-columns: 15px 1fr;
+    column-gap: 14px;
+    row-gap: 4px;
+    width: 100%;
+    min-height: 0;
+}
+
+#content .domain_list > li.open .domain_more_text {
+    display: none;
+}
+
+#content .domain_list > li.open .domain_more {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    align-self: start;
+}
+
+#content .domain_list > li.open .domain_name {
+    grid-column: 2;
+}
+
+#content .domain_list > li.open .domain_name span {
+    margin-top: 0;
+}
+
+#content .domain_list > li.open .domain_desc {
+    grid-column: 1 / -1;
+    width: 100%;
+    margin-top: 14px;
+    text-align: justify;
+}
+
+/* 환경 카드는 제목과 아이콘의 위치만 반대로 배치한다. */
+#content .domain_list > li:nth-child(2).open .domain_info {
+    grid-template-columns: 1fr 15px;
+}
+
+#content .domain_list > li:nth-child(2).open .domain_more {
+    grid-column: 2;
+}
+
+#content .domain_list > li:nth-child(2).open .domain_name {
+    grid-column: 1;
+}
+
+#content .domain_list > li:nth-child(2).open .domain_name span,
+#content .domain_list > li:nth-child(2).open .domain_name strong {
+    text-align: right;
+}
+
+#content .domain_list > li:nth-child(2).open .domain_desc {
+    text-align: right;
+}
+#content .domain_desc {
+    display: block;
+    max-height: 0;
+    margin-top: 0;
+    overflow: hidden;
+    opacity: 0;
+    color: var(--color-font-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.65;
+    word-break: keep-all;
+    transition: max-height .3s ease, margin-top .3s ease, opacity .2s ease;
+}
+
+#content .domain_list > li.open .domain_desc {
+    max-height: 120px;
+    margin-top: 14px;
+    opacity: 1;
+}
+
+/* 기술인증 현황 */
+#content .certification_filter {
+    display: flex;
+    margin-top: 24px;
+    padding: 12px 8px;
+    background: var(--color-sub-01);
+}
+
+#content .certification_filter li {
+    width: 25%;
+    text-align: center;
+}
+
+#content .certification_filter a {
+    color: var(--color-font-02);
+    font-size: var(--font-label-small-size);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+#content .certification_filter a.active {
+    color: var(--color-font-01);
+    font-weight: 700;
+}
+
+#content .certification_table_wrap {
+    margin-top: 12px;
+    border: 1px solid var(--color-light-gray);
+}
+
+#content .certification_table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+#content .certification_table .number_col {
+    width: 25%;
+}
+
+#content .certification_table .date_col {
+    width: 20%;
+}
+
+#content .certification_table th,
+#content .certification_table td {
+    padding: 12px 8px;
+    border-bottom: 1px solid var(--color-light-gray);
+    color: var(--color-main-02);
+    font-size: var(--font-body-small-size);
+    font-weight: 400;
+    line-height: 1.55;
+    text-align: center;
+    vertical-align: middle;
+    word-break: break-all;
+}
+
+#content .certification_table thead th {
+    background: var(--color-sub-01);
+    font-weight: 700;
+}
+
+#content .certification_table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+#content .certification_table tbody td:first-child {
+    text-align: left;
+}
+
+#content .certification_table td strong,
+#content .certification_table td span {
+    display: block;
+}
+
+#content .certification_table td strong {
+    margin-bottom: 4px;
+    font-weight: 700;
+}
+
+#content .certification_table .construction {
+    color: var(--color-main-01);
+}
+
+#content .certification_table .environment {
+    color: #1a7a47;
+}
+
+#content .certification_table .patent {
+    color: var(--color-point-01);
+}
+
+#content .certification_pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+#content .certification_pagination ol {
+    display: flex;
+    gap: 12px;
+}
+
+#content .certification_pagination a {
+    color: var(--color-font-02);
+    font-size: var(--font-label-small-size);
+    line-height: 1.5;
+}
+
+#content .certification_pagination a.active {
+    color: var(--color-font-01);
+    font-weight: 700;
+}
+
+#content .certification_pagination a.disabled {
+    color: var(--color-light-gray);
+}
+
+#content .certification_note {
+    margin-top: 18px;
+    color: var(--color-font-03);
+    font-size: var(--font-body-small-size);
+    line-height: 1.55;
+    word-break: keep-all;
+}
+
+@media screen and (min-width: 500px) {
+    #content .rnd_overview,
+    #content .research_domains,
+    #content .technology_certifications {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+}
+
+/* 핵심 연구영역 자세히보기 버튼 */
+#content .domain_more {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--color-font-01);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* 9개의 점으로 만든 버튼 아이콘 */
+#content .nav-icon-1 {
+    display: inline-block;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    transition: .1s;
+}
+
+#content .nav-icon-1 span {
+    display: block;
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: var(--color-font-01);
+    transition: 350ms cubic-bezier(.8, .5, .2, 1.4);
+}
+
+#content .nav-icon-1:hover span {transform: scale(1.2);}
+
+#content .nav-icon-1 span:nth-child(1) {left: 0; top: 0;}
+#content .nav-icon-1 span:nth-child(2) {left: 6px; top: 0;}
+#content .nav-icon-1 span:nth-child(3) {right: 0; top: 0;}
+#content .nav-icon-1 span:nth-child(4) {left: 0; top: 6px;}
+#content .nav-icon-1 span:nth-child(5) {left: 6px; top: 6px;}
+#content .nav-icon-1 span:nth-child(6) {right: 0; top: 6px;}
+#content .nav-icon-1 span:nth-child(7) {
+    left: 0; bottom: 0;
+}
+#content .nav-icon-1 span:nth-child(8) {
+    left: 6px; bottom: 0;
+}
+#content .nav-icon-1 span:nth-child(9) {
+    right: 0; bottom: 0;
+}
+
+/* 클릭하면 점의 위치가 변하면서 아이콘이 회전한다. */
+#content .nav-icon-1.open {
+    transform: rotate(180deg);
+    transition: .2s cubic-bezier(.8, .5, .2, 1.4);
+}
+
+#content .nav-icon-1.open span {
+    border-radius: 50%;
+    transition: .5s cubic-bezier(.8, .5, .2, 1.4);
+}
+
+#content .nav-icon-1.open span:nth-child(2) {
+    left: 3px; top: 3px;
+}
+#content .nav-icon-1.open span:nth-child(4) {
+    left: 3px; top: 9px;
+}
+#content .nav-icon-1.open span:nth-child(6) {
+    right: 3px; top: 3px;
+}
+#content .nav-icon-1.open span:nth-child(8) {
+    left: 9px; bottom: 3px;
+}

@@ -1,0 +1,464 @@
+@charset "UTF-8";
+
+/* ========================================================
+   아테라 브랜드 스토리
+======================================================== */
+
+#content .content_area{
+    width: 100%;
+    overflow: hidden;
+}
+
+#content .content_area section{
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* 각 콘텐츠의 작은 영문 번호 제목 */
+#content .sec_label{
+    display: block;
+    margin: 0;
+    position: relative;
+    color: var(--color-point-02);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-large-size);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: 0;
+}
+
+
+#content .sec_label::after{
+    content: '';
+    width: 80px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+    background: var(--color-point-02);
+}
+
+/* ===== 01 BRAND ESSENCE ===== */
+#content .brand_essence{
+    width: 1400px;
+    height: 650px;
+    margin: 0 auto;
+}
+
+#content .brand_essence > .sec_label{
+    position: absolute;
+    left: 0;
+    top: 42px;
+}
+
+#content .essence_visual{
+    width: 1400px;
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 70px;
+}
+
+#content .essence_visual > img{
+    width: 1040px;
+    height: 500px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    object-fit: cover;
+    object-position: center;
+}
+
+#content .essence_txt{
+    width: 610px;
+    height: 270px;
+    padding: 30px 46px 20px;
+    position: absolute;
+    left: 0;
+    top: 230px;
+    box-sizing: border-box;
+    background: var(--color-point-04);
+}
+
+#content .essence_txt > span{
+    display: block;
+    color: var(--color-point-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: .12em;
+}
+
+#content .essence_txt > strong{
+    margin-top: 18px;
+    display: block;
+    color: var(--color-font-01);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.37;
+}
+
+#content .essence_txt p{
+    margin-top: 14px;
+    color: var(--color-font-02);
+    font-size: var(--font-label-large-size);
+    line-height: 1.65;
+}
+
+/* ===== 02 BRAND NAME ===== */
+#content .brand_name{
+    width: 1400px;
+    height: 450px;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+#content .brand_name::before{
+    content: '';
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: -1;
+    background: var(--color-point-04);
+    transform: translateX(-50%);
+}
+
+#content .brand_name > .sec_label{
+    position: absolute;
+    left: 0;
+    top: 44px;
+}
+
+#content .name_formula{
+    width: 1400px;
+    height: 172px;
+    position: absolute;
+    left: 0;
+    top: 127px;
+    display: flex;
+    align-items: start;
+}
+
+#content .name_formula::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    top: 90px;
+    background: var(--color-sub-01);
+}
+
+#content .name_formula dl{
+    flex: 1;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+#content .name_formula dt{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#content .name_formula dt img{
+    width: auto;
+    height: 60px;
+    display: block;
+    object-fit: contain;
+}
+
+#content .name_formula dl:first-child dt img,
+#content .name_formula dl:last-child dt img{max-width: 237px;}
+
+#content .name_formula dl:nth-of-type(2) dt img{max-width: 393px;}
+
+#content .name_formula dd{
+    margin-top: 48px;
+    color: var(--color-main-02);
+    font-size: var(--font-body-large-size);
+    line-height: 1.9;
+    font-weight: 700;
+}
+#content .name_formula dd span{
+    color: var(--color-main-01);
+    font-size: var(--font-body-xlarge-size);
+}
+
+#content .name_formula .plus{
+    flex: 0 0 70px;
+    color: var(--color-point-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-display-large-size);
+    font-weight: 700;
+    line-height: 60px;
+    text-align: center;
+}
+#content .name_formula strong{
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 220px;
+    color: var(--color-point-01);
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    line-height: 1.5;
+    text-align: center;
+}
+/* ===== 03 ARTERA STORY ===== */
+#content .brand_story{
+    width: 1400px;
+    height: 820px;
+    margin: 0 auto;
+    z-index: 0;
+}
+
+#content .brand_story::before{
+    content: '';
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: -1;
+    background: var(--color-point-03);
+    transform: translateX(-50%);
+}
+
+#content .brand_story > .sec_label{
+    position: absolute;
+    left: 0;
+    top: 48px;
+}
+
+#content .brand_story > strong{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 112px;
+    color: var(--color-font-01);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.47;
+}
+
+#content .story_visual{
+    width: 1400px;
+    height: 560px;
+    position: absolute;
+    left: 0;
+    top: 190px;
+}
+
+#content .story_visual > img{
+    width: 1400px;
+    height: 500px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+#content .story_panel{
+    width: 650px;
+    height: 430px;
+    padding: 48px;
+    position: absolute;
+    right: 60px;
+    top: 130px;
+    box-sizing: border-box;
+    overflow: hidden;
+    color: var(--color-white);
+    background: var(--color-point-01);
+    box-shadow: 0 24px 48px rgba(10,15,33,.18);
+}
+
+#content .story_panel::before{
+    content: '';
+    width: 42px;
+    height: 4px;
+    margin-bottom: 20px;
+    display: block;
+    background: var(--color-point-02);
+}
+
+#content .story_panel dl > div{margin-bottom: 18px;}
+#content .story_panel dl > div:last-child{margin-bottom: 0;}
+
+#content .story_panel dt{
+    font-size: var(--font-body-large-size);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+#content .story_panel dt span{
+    margin-bottom: 3px;
+    display: block;
+    color: var(--color-point-03);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-medium-size);
+    font-weight: 500;
+    line-height: 1.5;
+
+}
+
+#content .story_panel dd{
+    margin-top: 5px;
+    font-size: var(--font-body-medium-size);
+    line-height: 1.65;
+}
+
+/* ===== 04 CORE VALUES ===== */
+#content .core_values{
+    width: 1400px;
+    height: 620px;
+    margin: 0 auto;
+    display: flex;
+}
+
+#content .values_intro{
+    width: 500px;
+    padding-top: 58px;
+    box-sizing: border-box;
+}
+
+#content .values_intro > strong{
+    margin-top: 56px;
+    display: block;
+    color: var(--color-point-01);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+#content .values_intro .values_desc{
+    margin-top: 26px;
+    display: block;
+    color: var(--color-font-02);
+    font-size: var(--font-label-large-size);
+    line-height: 1.75;
+}
+
+#content .values_list{
+    width: 900px;
+    height: 424px;
+    margin-top: 112px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    border-top: 1px solid var(--color-sub-01);
+}
+
+#content .values_list li{
+    width: 50%;
+    height: 50%;
+    padding: 34px 48px;
+    box-sizing: border-box;
+    border-bottom: 1px solid var(--color-sub-01);
+}
+
+#content .values_list li:nth-child(odd){border-right: 1px solid var(--color-sub-01);}
+
+#content .values_list li > span{
+    display: block;
+    color: var(--color-point-02);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: .1em;
+}
+
+#content .values_list li strong{
+    margin-top: 4px;
+    display: block;
+    color: var(--color-point-01);
+    font-size: var(--font-h6-size);
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+#content .values_list li .value_desc{
+    margin-top: 4px;
+    display: block;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.85;
+}
+
+/* ===== 05 BRAND SLOGAN ===== */
+#content .brand_slogan{
+    width: 1400px;
+    height: 260px;
+    margin: 0 auto;
+    z-index: 0;
+    color: var(--color-white);
+}
+
+#content .brand_slogan::before{
+    content: '';
+    width: 100vw;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: -1;
+    background: var(--color-point-01);
+    transform: translateX(-50%);
+}
+
+#content .brand_slogan .sec_label{
+    position: absolute;
+    left: 0;
+    top: 48px;
+}
+
+#content .brand_slogan > strong{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 112px;
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.55;
+}
+
+#content .brand_slogan .slogan_desc{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 168px;
+    color: var(--color-point-03);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.75;
+}
+
+#content .brand_slogan > a{
+    position: absolute;
+    right: 0;
+    top: 108px;
+    color: var(--color-white);
+    font-size: var(--font-label-large-size);
+    font-weight: 700;
+    line-height: 1.7;
+}
+
+#content .brand_slogan > a::after{
+    content: '';
+    width: 48px;
+    height: 3px;
+    position: absolute;
+    right: 0;
+    bottom: -12px;
+    background: var(--color-point-02);
+    transition: width .3s ease-out;
+}
+
+#content .brand_slogan > a:hover::after,
+#content .brand_slogan > a:focus-visible::after{width: 100%;}

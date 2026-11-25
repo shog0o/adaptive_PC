@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+/* 로그인·회원가입 공통 */
+body{background: #F6F7F8;}
+
+.member_content{
+    width: 100%;
+    min-height: 800px;
+    padding: 170px 0 120px;
+    box-sizing: border-box;
+}
+
+.member_box{
+    width: 720px;
+    margin: 0 auto;
+    padding: 60px 70px;
+    box-sizing: border-box;
+    background: var(--color-white);
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(0,0,0,.08);
+}
+
+.member_box h2{
+    color: var(--color-font-01);
+    font-size: var(--font-display-small-size);
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: center;
+}
+
+.member_intro{
+    margin-top: 12px;
+    display: block;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.7;
+    text-align: center;
+}
+
+.member_form{margin-top: 45px;}
+.member_form li{margin-top: 24px;}
+.member_form li:first-child{margin-top: 0;}
+
+.member_form label,
+.member_form .form_label{
+    margin-bottom: 8px;
+    display: block;
+    color: var(--color-font-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 600;
+}
+
+.required{margin-left: 4px; color: var(--color-main-01);}
+
+.member_form input,
+.member_form select{
+    height: 54px;
+    padding: 0 16px;
+    border: 1px solid #D9DBDE;
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+    background: var(--color-white);
+    color: var(--color-font-01);
+    font-family: var(--font-family-kr);
+    font-size: var(--font-body-medium-size);
+}
+
+.member_form input:focus,
+.member_form select:focus{border-color: var(--color-main-01);}
+.member_form > ul > li > input{width: 100%;}
+.member_form input::placeholder{color: #AAAAAA;}
+
+.form_row{display: flex; align-items: center; gap: 10px;}
+.form_row input,
+.form_row select{flex: 1; min-width: 0;}
+.form_row .at{flex: 0 0 auto; color: var(--color-font-02);}
+
+.member_button{
+    margin-top: 48px;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.member_button button,
+.member_button a{
+    width: 220px;
+    height: 56px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--color-main-01);
+    border-radius: 28px;
+    box-sizing: border-box;
+    font-family: var(--font-family-kr);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.member_button .primary{background: var(--color-main-01); color: var(--color-white);}
+.member_button .secondary{background: var(--color-white); color: var(--color-main-01);}
+
+/* 로그인 */
+.login_box{width: 560px;}
+.login_form label{margin-top: 20px;}
+.login_form label:first-child{margin-top: 0;}
+.login_form input{width: 100%;}
+.login_form .login_submit{
+    margin-top: 30px;
+    border: 0;
+    background: var(--color-main-01);
+    color: var(--color-white);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.find_link{margin-top: 22px; display: flex; justify-content: center;}
+.find_link a{padding: 0 14px; color: var(--color-font-02); font-size: var(--font-body-medium-size);}
+.find_link a + a{border-left: 1px solid #D9DBDE;}
+.join_guide{margin-top: 45px; padding-top: 28px; border-top: 1px solid #E5E6E8; text-align: center;}
+.join_guide span{color: var(--color-font-02); font-size: var(--font-body-medium-size);}
+.join_guide a{margin-left: 8px; display: inline; color: var(--color-main-01); font-weight: 700;}
+
+/* 약관 동의 */
+.agree_box{width: 900px;}
+.agree_section{margin-top: 38px;}
+.agree_section h3{font-size: var(--font-h6-size); line-height: 1.5;}
+.policy{
+    height: 150px;
+    margin-top: 14px;
+    padding: 22px;
+    overflow-y: auto;
+    border: 1px solid #D9DBDE;
+    box-sizing: border-box;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.8;
+}
+
+.check{margin-top: 16px;}
+.check input{position: absolute; left: -10000px;}
+.check label{display: flex; align-items: center; font-size: var(--font-body-medium-size); cursor: pointer;}
+.check label::before{
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border: 1px solid #B8BBC0;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.check input:checked + label::before{
+    content: '✓';
+    border-color: var(--color-main-01);
+    background: var(--color-main-01);
+    color: var(--color-white);
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+}
+.all_check_box{margin-top: 36px; padding: 20px; background: #F6F7F8;}
+.all_check_box .check{margin-top: 0;}
+

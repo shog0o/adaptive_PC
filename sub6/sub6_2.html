@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <title>회사소개:사업소개</title>
+    <script src="https://kit.fontawesome.com/41c9e9a1a8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/aos.css">
+    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="./css/sub6_common.css">
+    <link rel="stylesheet" href="./css/sub6_2.css">
+</head>
+
+<body>
+    <div id="skipNav">
+        <a href="#content">본문 바로가기</a><a href="#gnb">네비게이션 바로가기</a>
+    </div>
+    <div id="wrap">
+        <header id="headerArea"></header>
+
+        <!-- 서브상단 비주얼이미지 사이즈 2000* 350~400 -->
+        <div class="visual">
+            <img src="./images/common/SUB_HEAD_IMG.jpg" alt="">
+            <strong>회사소개</strong>
+        </div>
+        
+        <div class="sub_nav">
+            <ul>
+                <li><a href="https://hkt5980.mycafe24.com/gb/bbs/board.php?bo_table=notice">금호뉴스</a></li>
+                <li><a class="active" href="https://hkt5980.mycafe24.com/gb/bbs/board.php?bo_table=gallery">PR 자료실</a></li>
+                <li><a href="../sub6/sub6_3.html">투자정보</a></li>
+            </ul>
+        </div>
+
+        <main id="content">
+            <article>
+                <div class="title_area">
+                    <div class="line_map">
+                        HOME &gt; 홍보센터 &gt; <strong>PR 자료실</strong>
+                    </div>
+                    <h2>
+                        <span class="title_main">PR 자료실<img src="../images/kumhoenc_logo_01_03.png" alt=""></span>
+                        <span class="title_en">PR ROOM</span>
+                    </h2>
+                </div>
+
+                <div class="content_area">
+                    실제 페이지의 내용부분
+                </div>
+            </article>
+        </main>
+
+
+
+        <footer id="footerArea"></footer>
+
+    </div>
+        <script src="../js/jquery-1.12.4.min.js"></script>
+        <script src="../js/jquery-migrate-1.4.1.min.js"></script>
+        <script src="../js/jquery.easing.1.3.js"></script>
+        <script>
+            $('#headerArea').load('../common/sub_header.html',function(){
+                $.getScript('../js/fullnav.js');
+            });
+
+            $('#footerArea').load('../common/sub_footer.html',function(){
+                $.getScript('../js/select.js');
+            });
+        </script>
+        <script src="../js/aos.js"></script>
+        <script>
+            AOS.init({
+            easing: 'ease-in-out-sine'
+            });
+        </script>
+</body>
+
+</html>

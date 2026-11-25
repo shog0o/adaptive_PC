@@ -1,0 +1,246 @@
+@charset "UTF-8";
+
+/* sub4_2 채용프로세스: sub4_1과 같은 모바일 글자·여백 기준 */
+#content .content_area {
+    width: 100%;
+    background: var(--color-white);
+}
+
+#content .recruit_process,
+#content .next_step {
+    padding: 56px 6%;
+    box-sizing: border-box;
+}
+
+#content .sec_tit {
+    margin: 0;
+    color: var(--color-font-01);
+    font-weight: 700;
+    word-break: keep-all;
+}
+
+#content .sec_label {
+    display: block;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .heading_text {
+    display: block;
+    margin-top: 24px;
+    font-size: var(--font-h4-size);
+    line-height: 1.5;
+    text-align: center;
+}
+
+#content .sec_desc {
+    margin-top: 20px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.75;
+    text-align: center;
+    word-break: keep-all;
+}
+
+/* 연결선은 목록과 같은 영역을 차지하고, 단계의 높이는 내용에 따라 결정된다. */
+#content .process_journey {
+    position: relative;
+    margin-top: 32px;
+}
+
+#content .process_arrow {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: visible;
+    pointer-events: none;
+}
+
+#content .process_arrow.ready {
+    visibility: visible;
+}
+
+#content .process_arrow .arrow_line {
+    fill: none;
+    stroke: #E5B8BF;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+#content .process_arrow .arrow_head {
+    fill: var(--color-main-01);
+}
+
+/* 01→02, 03→04, 05→06을 왼쪽에서 오른쪽으로 읽는 2열 목록 */
+#content .process_list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    column-gap: 24px;
+    row-gap: 56px;
+}
+
+#content .process_list > li {
+    position: relative;
+    width: calc(50% - 12px);
+    min-width: 0;
+    padding: 0 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* 원형 배경은 연결선 위에 놓아 선이 그림 안쪽을 가리지 않게 한다. */
+#content .step_icon {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    border: 1px solid #f5d1d6;
+    border-radius: 50%;
+    background: #fff6f7;
+}
+
+#content .step_icon img {
+    display: block;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+}
+
+/* 기존 아이콘 AOS를 유지하되 연결선 기준인 원형 박스는 움직이지 않는다. */
+#content .step_icon img[data-aos="icon-pop"] {
+    opacity: 0;
+    transform: scale(.9);
+    transition-property: opacity, transform;
+}
+
+#content .step_icon img[data-aos="icon-pop"].aos-animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#content .process_list dt {
+    color: var(--color-font-01);
+    font-size: var(--font-h6-size);
+    font-weight: 700;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+#content .process_list dt span {
+    display: block;
+    margin: 10px 0 8px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .process_list dd {
+    margin-top: 10px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-small-size);
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+/* 전형 안내는 별도 헤딩을 늘리지 않고 안내 상자로 표시한다. */
+#content .process_guide {
+    padding: 32px 6%;
+    background: var(--color-sub-01);
+}
+
+#content .guide_tit {
+    display: block;
+    color: var(--color-font-01);
+    font-size: var(--font-h6-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .guide_desc {
+    margin-top: 12px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.75;
+    word-break: keep-all;
+}
+
+/* 02. 다음 단계: 직무소개 페이지로 이동하는 전체 너비 링크 */
+#content .job_intro_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    margin-top: 24px;
+    padding: 14px 20px;
+    box-sizing: border-box;
+    background: var(--color-main-01);
+    color: var(--color-white);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.5;
+    text-align: center;
+    transition: background .3s;
+}
+
+#content .job_intro_link span {
+    margin-left: 14px;
+    font-family: var(--font-family-en);
+}
+
+#content .job_intro_link:hover {
+    background: var(--color-point-01);
+}
+
+@media screen and (min-width: 500px) {
+    #content .recruit_process,
+    #content .next_step {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    #content .process_journey {
+        margin-top: 40px;
+    }
+
+    #content .process_list {
+        row-gap: 64px;
+    }
+
+    #content .step_icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    #content .step_icon img {
+        width: 80px;
+        height: 80px;
+    }
+
+    #content .process_list dt {
+        font-size: var(--font-h5-size);
+    }
+
+    #content .process_list dd {
+        font-size: var(--font-body-medium-size);
+    }
+
+    #content .process_guide {
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+}

@@ -1,0 +1,1228 @@
+@charset "UTF-8";
+
+/* index페이지용 CSS */
+
+
+/* ============================================================== */
+/* ==                         VISUAL 영역                       == */
+/* ============================================================== */
+
+.visual{
+    width: 100%;
+    height: 930px;
+    position: relative;
+    overflow: hidden;
+}
+
+.gallery,
+.gallery ul,
+.gallery li{width: 100%; height: 100%;}
+
+.gallery{position: relative; overflow: hidden;}
+.gallery li{
+    display: none; 
+    position: absolute; 
+    left: 0; top: 0;
+}
+.gallery img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    animation: ani 30s linear infinite;
+}
+
+/* 다섯 번째 비주얼 텍스트 가독성을 위한 이미지 딤 처리 */
+.gallery .link5 img{filter: brightness(.75);}
+@keyframes ani {
+    from {transform: scale(1);}
+    to {transform: scale(1.2);}
+}
+
+.gallery li p{
+    width: 1400px;
+    position: absolute;
+    left: 50%;
+    top: 760px;
+    transform: translateX(-50%);
+    opacity: 0;
+    font-size: var(--font-display-small-size);
+    font-weight: 500;
+    color: var(--color-white);
+}
+
+.gallery li p > span{
+    margin-right: 10px;
+    font-size: var( --font-h3-size);
+    color: var(--color-point-02);
+    font-weight: 700;
+}
+
+/* ===== 롤링 컨트롤: 정지 + 이전 + 프로그레스 바 + 다음 ===== */
+.dock{
+    position: absolute;
+    right: max(30px, calc(50% - 700px));
+    top: 740px;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.dock span{display: block;}
+
+.dock .progress{
+    width: 245px;
+    height: 6px;
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, .3);
+}
+
+.dock .progress_fill{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    border-radius: 999px;
+    background: var(--color-white);
+}
+
+.dock .mbutton{
+    width: 20%;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    background: transparent;
+    cursor: pointer;
+}
+
+.dock .ps{cursor: pointer;}
+.dock .ps svg{
+    width: 20px; 
+    height: 20px; 
+    font-size: var(--font-body-xlarge-size); 
+    color: var(--color-white);
+}
+
+.dock .btn{
+    position: static; 
+    transform: none; 
+    cursor: pointer;
+}
+.dock .btn svg{
+    width: 12px; 
+    height: 20px; 
+    font-size: var(--font-body-xlarge-size); 
+    color: var(--color-white);
+}
+
+.visual > .visual_brand{
+    width: 1400px;
+    position: absolute;
+    left: 50%;
+    top: 800px;
+    z-index: 10;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.visual > .visual_brand img{width: auto; height: 45px;}
+.visual > .visual_brand .artera_popup_open{
+    padding: 0;
+    border: 0;
+    background: transparent;
+    font-size: 3rem;
+    color: var(--color-white);
+    cursor: pointer;
+}
+
+
+/* ============================================================== */
+/* ==                        본문공통영역                        == */
+/* ============================================================== */
+#content section{
+    width: 1400px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+#content section h3{
+    font-size: var(--font-h3-size);
+    font-weight: 700;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ============================================================== */
+/* ==                        회사소개영역                        == */
+/* ============================================================== */
+#content .about{padding: 50px 0 80px;}
+
+#content .about h3 span{
+    display: block;
+    font-size: var(--font-label-small-size);
+    line-height: 1;
+    margin-bottom: 20px;
+    color: rgba(69, 74, 81, .6);
+    font-family: var(--font-family-en);
+    font-weight: 300;
+}
+
+#content .about h3{
+    color: var(--color-main-01);
+    margin: 15px 0;
+}
+
+#content .about .section_sub{
+    margin-top: 15px;
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 600;
+    color: var(--color-font-01);
+}
+
+#content .about_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 65px;
+}
+
+#content .about_text{width: 430px;}
+#content .about_text p{font-size: var(--font-body-large-size);}
+
+#content .about_text p span{
+    color: var(--color-main-01);
+    font-weight: 700;
+}
+
+#content .about .more{
+    width: 140px;
+    padding: 14px 0;
+    margin-top: 40px;
+    background: var(--color-main-01);
+    color: var(--color-white);
+    text-align: center;
+    border-radius: 30px;
+    font-weight: 700;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .18);
+    transition: background-color .3s ease, color .3s ease, box-shadow .3s ease;
+}
+
+#content .about .more:hover{
+    background: var(--color-white);
+    color: var(--color-main-01);
+    box-shadow:
+        inset 0 0 0 3px var(--color-main-02),
+        0 4px 12px rgba(0, 0, 0, .28);
+}
+
+#content .about_card{
+    display: flex;
+    gap: 15px;
+    margin-right: 105px;
+}
+
+/* ===== 카드 기본 ===== */
+#content .about_card li{
+    width: 270px;
+    height: 400px;
+    background: var(--color-main-02);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    position: relative;
+    overflow: hidden;
+    transition: all .4s ease-out;
+}
+
+/* ===== 아이콘 ===== */
+#content .about_card li .icon{
+    font-size: 6rem;
+    margin-bottom: 50px;
+    transition: all .4s ease-out;
+}
+
+/* ===== 기본 한글 제목 ===== */
+#content .about_card li strong{
+    display: block;
+    font-size: var(--font-h4-size);
+    margin-bottom: 10px;
+    transition: all .3s ease-out;
+}
+
+/* ===== 기본 영문 제목 ===== */
+#content .about_card .card_txt{
+    display: block;
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-medium-size);
+    font-weight: 300;
+    transition: all .3s ease-out;
+}
+
+/* ===== hover 상태에서 나타날 텍스트 ===== */
+#content .about_card .hover_txt{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 35px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all .4s ease-out;
+}
+
+/* SPAN */
+#content .about_card .hover_txt .hover_en{
+    display: block;
+    margin-bottom: 12px;
+    font-family: var(--font-family-en);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#content .about_card .hover_txt .hover_ko{
+    display: block;
+    margin-bottom: 12px;
+    font-family: var(--font-family-kr);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+/* 설명 */
+#content .about_card .hover_txt p{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* ===== CARD HOVER ===== */
+#content .about_card li:hover{
+    background: var(--color-main-01);
+    border-radius: 30px;
+}
+
+/* 아이콘 위로 이동 */
+#content .about_card li:hover .icon{
+    font-size: 8rem;
+    margin-bottom: 0;
+    opacity: .2;
+    transform: translateY(-65px);
+}
+
+/* 기존 신뢰 / TRUST 숨기기 */
+#content .about_card li:hover strong,
+#content .about_card li:hover .card_txt{opacity: 0;}
+
+/* hover 문구 등장 */
+#content .about_card li:hover .hover_txt{opacity: 1; transform: translateY(0);}
+
+
+/* ============================================================== */
+/* ==                        사업분야영역                        == */
+/* ============================================================== */
+
+
+/* ===== 사업분야 전체 ===== */
+#content .business{
+    width: 100%;
+    position: relative;
+    background: var(--color-sub-01);
+    padding: 80px 0;
+}
+
+#content .business .business_inner{
+    width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* ===== 상단 제목 영역 ===== */
+#content .business h3{
+    margin-bottom: 20px;
+    font-size: var(--font-h3-size);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-main-01);
+}
+
+#content .business h3 span{
+    display: block;
+    margin-bottom: 20px;
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 400;
+    color: rgba(69, 74, 81, .55);
+}
+
+#content .business .section_sub{
+    margin-top: 15px;
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    color: var(--color-font-01);
+}
+
+/* ===== 검색창 + 카드 전체 영역 ===== */
+#content .business .business_content{
+    width: 1270px;
+    margin: 80px auto 0;
+}
+
+/* 검색창 */
+#content .business .search_box{
+    position: absolute;
+    right: 105px;
+    top: 86px;
+    width: 330px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    background: #f7f7f7;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .12);
+    z-index: 5;
+}
+
+#content .business .search_box input{
+    width: calc(100% - 55px);
+    height: 100%;
+    padding: 0 20px;
+    border: 0;
+    background: transparent;
+    font-size: var(--font-body-medium-size);
+    box-sizing: border-box;
+}
+
+#content .business .search_box input:focus{
+    outline: 2px solid #f7f7f7;
+    outline-offset: -2px;
+}
+
+#content .business .search_box button{
+    width: 55px;
+    height: 100%;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    color: var(--color-font-03);
+    font-size: var(--font-label-medium-size);
+}
+
+#content .business .search_hints{
+    width: 100%;
+    max-height: 250px;
+    display: none;
+    overflow-y: auto;
+    position: absolute;
+    left: 0;
+    top: 54px;
+    padding: 10px 0;
+    border: 1px solid var(--color-light-gray);
+    border-radius: 12px;
+    box-sizing: border-box;
+    background: var(--color-white);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, .12);
+}
+
+#content .business .search_hints a{
+    padding: 11px 20px;
+    display: block;
+    color: var(--color-font-01);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.5;
+}
+
+#content .business .search_hints a:hover,
+#content .business .search_hints a:focus{
+    background: var(--color-sub-01);
+    color: var(--color-main-01);
+}
+
+/* ===== 카드 전체 ===== */
+#content .business_box{
+    width: 1270px;
+    height: 500px;
+    padding: 0 40px;
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+/* 개별 카드 */
+#content .business_box li{
+    position: relative;
+    /* 너비는 business.js의 animate()로 조절하므로 flex 자동 배분 해제 */
+    flex: 0 0 auto;
+    width: 390px;
+    min-width: 0;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+    /* transition: flex-grow .5s cubic-bezier(.77, 0, .18, 1); */
+}
+
+#content .business_box li:nth-child(1){border-radius: 10px 0 0 10px;}
+#content .business_box li:nth-child(2){border-radius: 0;}
+#content .business_box li:nth-child(3){border-radius: 0 10px 10px 0;}
+
+/* ===== 카드 Hover 크기 ===== */
+/* #content .business_box li:hover{flex-grow: 3;} */
+
+/* ===== 이미지 영역 ===== */
+#content .business_box li .box_img{
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 702px;
+    height: 100%;
+}
+
+#content .business_box li .box_img img{
+    width: 702px;
+    height: 100%;
+    max-width: none;
+    /* 이미지 위치는 고정하고 li의 너비만 변경하여 보이는 범위를 조절 */
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* 이미지 딤드 */
+#content .business_box li::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .3);
+    z-index: 1;
+    /* transition: background .5s ease-out; */
+}
+
+/* #content .business_box li:hover::after{background: rgba(0, 0, 0, .8);} */
+
+/* JavaScript가 선택한 카드에 active 클래스를 추가하여 기존 딤 효과 적용 */
+#content .business_box li::after{transition: background-color .3s ease;}
+#content .business_box li.active::after{background: rgba(0, 0, 0, .8);}
+
+/* ===== 카드 텍스트 ===== */
+#content .business_box li .box_txt{
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: 40px;
+    z-index: 2;
+    color: var(--color-white);
+}
+
+/* 사업명 */
+#content .business_box li .box_txt h4{
+    margin-bottom: 15px;
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+    /* transition: margin-bottom .4s ease; */
+}
+
+/*  설명  */
+#content .business_box li .box_txt p{
+    max-height: 52px;
+    overflow: hidden;
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    color: rgba(255, 255, 255, .9);
+    opacity: 1;
+    /* transition: opacity .4s ease-out; */
+}
+
+/* #content .business_box:hover li .box_txt h4{margin-bottom: 0;}
+#content .business_box:hover li .box_txt p{
+    max-height: 0;
+    opacity: 0;
+} */
+
+/* #content .business_box li:hover .box_txt h4{margin-bottom: 15px;}
+#content .business_box li:hover .box_txt p{
+    max-height: 52px;
+    opacity: 1;
+} */
+
+/* ===== 자세히보기 ===== */
+#content .business_box li .box_txt a{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    padding-left: 100px;
+    font-size: var(--font-label-large-size);
+    font-weight: 600;
+    color: var(--color-main-01);
+    white-space: nowrap;
+    opacity: 0;
+    /* transition: opacity .4s ease-out; */
+}
+
+/* #content .business_box li:hover .box_txt a{opacity: 1;} */
+
+/* 기존 hover 디자인을 JavaScript가 변경하는 클래스와 연결 */
+#content .business_box li .box_txt p{transition: opacity .3s ease;}
+#content .business_box li .box_txt a{
+    visibility: hidden;
+    transition: opacity .3s ease;
+}
+#content .business_box li.contract .box_txt h4{margin-bottom: 0;}
+#content .business_box li.contract .box_txt p{max-height: 0; opacity: 0;}
+#content .business_box li.active .box_txt a{opacity: 1; visibility: visible;}
+
+/* 자세히보기 라인  */
+#content .business_box li .box_txt a::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 75px;
+    height: 1px;
+    background: rgba(255, 255, 255, .8);
+}
+
+/* 하단 설명  */
+#content .business .business_bottom{
+    margin: 80px 0 30px;
+    text-align: center;
+    font-size: var(--font-body-xlarge-size);
+    line-height: 1.7;
+    color: var(--color-font-01);
+}
+
+#content .business .business_bottom span{
+    color: var(--color-main-01);
+    font-weight: 700;
+}
+
+
+/* ============================================================== */
+/* ==                        지속가능경영                         == */
+/* ============================================================== */
+#content .sustainability{
+    width: 100%;
+    padding: 50px 0 80px;
+    box-sizing: border-box;
+}
+
+#content .sustainability_inner{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/* ===== 타이틀 영역 ===== */
+#content .sustainability h3{
+    font-size: var(--font-h3-size);
+    line-height: 1;
+    color: var(--color-main-01);
+}
+
+#content .sustainability h3 span{
+    margin-bottom: 15px;
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 400;
+    line-height: 1;
+    color: rgba(69, 74, 81, .6);
+}
+
+#content .sustainability .section_sub{
+    margin-top: 15px;
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    color: var(--color-font-01);
+}
+
+/* ===== 지속가능경영 콘텐츠 전체 ===== */
+#content .sustainability_content{
+    width: 1190px;
+    height: 480px;
+    margin: 70px auto 0;
+    display: flex;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .15), 0 4px 8px 3px rgba(0, 0, 0, .15);
+}
+
+/* ===== 왼쪽 메뉴 ===== */
+#content .sustainability_menu{
+    flex: 0 0 66.6667%;
+    height: 480px;
+    cursor: pointer;
+}
+
+#content .sustainability_menu li{
+    position: relative;
+    width: 100%;
+    height: 33.33%;
+    background: var(--color-sub-01);
+    border-bottom: 1px solid rgba(69, 74, 81, .3);
+    box-sizing: border-box;
+}
+#content .sustainability_menu li .tab_inner{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+#content .sustainability_menu li:last-child{border-bottom: 0;}
+
+
+/* ===== 활성 메뉴 ===== */
+#content .sustainability_menu li.active{background: var(--color-sub-02);}
+
+/* ===== 번호 ===== */
+#content .sustainability_menu li strong{
+    position: absolute;
+    left: 50px;
+    top: 20px;
+    font-family: var(--font-family-en);
+    font-size: var(--font-h4-size);
+    font-weight: 800;
+    color: var(--color-font-01);
+}
+
+#content .sustainability_menu li.active strong{color: var(--color-main-01);}
+
+/* ===== 메뉴 텍스트 ===== */
+#content .sustainability_menu .menu_txt{
+    position: absolute;
+    left: 115px;
+    top: 58px;
+    width: 535px;
+}
+
+#content .sustainability_menu .menu_txt p{
+    margin-bottom: 12px;
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    color: var(--color-font-01);
+}
+
+/* 활성 항목의 강조문 */
+#content .sustainability_menu li.active .point{color: var(--color-main-01);}
+
+/* 더 알아보기 */
+#content .sustainability_menu .menu_txt .more{
+    display: inline-block;
+    font-size: var(--font-body-medium-size);
+    font-weight: 500;
+    color: var(--color-font-01);
+}
+
+#content .sustainability_menu .menu_txt .more:hover,
+#content .sustainability_menu .menu_txt .more:focus{
+    color: var(--color-main-01);
+    font-weight: 700;
+}
+
+/* ===== 우측 이미지 ===== */
+#content .sustainability .img_box{
+    flex: 1;
+    width: auto;
+    height: 480px;
+    overflow: hidden;
+}
+
+/* 탭 콘텐츠 이미지는 JavaScript에서 선택한 한 장만 표시 */
+#content .sustainability .img_box .contlist{
+    display: none;
+    width: calc(100% + 1px);
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* ============================================================== */
+/* ==                       INSIDE KUMHO                       == */
+/* ============================================================== */
+#content .inside_kumho{
+    width: 100%;
+    padding: 50px 0 68px;
+    background:
+        linear-gradient(rgba(17,17,17,.2), rgba(17,17,17,.2)),
+        url(../images/inside_kumho_bg.webp) center/cover no-repeat;
+    box-sizing: border-box;
+}
+
+#content .inside_inner{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/* ===== 타이틀 영역 ===== */
+#content .inside_kumho h3{
+    font-size: var(--font-h3-size);
+    line-height: 1;
+    color: var(--color-main-01);
+}
+
+#content .inside_kumho h3 span{
+    margin-bottom: 15px;
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 400;
+    line-height: 1;
+    color: var(--color-sub-01);
+    color: rgba(244, 245, 246, 0.6);
+}
+
+#content .inside_kumho .section_sub{
+    margin-top: 15px;
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 600;
+    color: var(--color-sub-01);
+}
+
+/* ===== 카드 전체 ===== */
+#content .inside_kumho .career_news{
+    width: 950px;
+    margin-top: 60px;
+    margin-left: 200px;
+}
+
+#content .inside_kumho .career_news ul{width: 100%;}
+
+/* ===== 카드 공통 ===== */
+#content .inside_kumho .career_news li{
+    position: relative;
+    width: 950px;
+    background: rgba(255, 244, 244, .75);
+    border-radius: 15px;
+    box-shadow:
+        0 2px 6px 2px rgba(0,0,0,.15),
+        0 1px 2px rgba(0,0,0,.3);
+    box-sizing: border-box;
+    /* 버튼은 적용안되고 뒤에 박스만 적용되도록 수정하기 */
+}
+
+#content .inside_kumho .career_news h4{
+    font-size: 1.625rem;
+    font-weight: 700;
+    color: var(--color-font-01);
+}
+
+#content .inside_kumho .career_news li > p{
+    font-size: var(--font-label-large-size);
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--color-font-01);
+}
+
+/* ===== 버튼 공통 ===== */
+#content .inside_kumho .career_news li > a{
+    position: absolute;
+    width: 200px;
+    height: 54px;
+    background: var(--color-main-01);
+    border-radius: 30px;
+    text-align: center;
+    line-height: 54px;
+    color: var(--color-white);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    box-shadow:
+        0 1px 3px rgba(0,0,0,.15),
+        0 1px 2px rgba(0,0,0,.3);
+    transition: background-color .3s ease, color .3s ease, box-shadow .3s ease;
+}
+
+#content .inside_kumho .career_news li > a:hover{
+    background: var(--color-white);
+    color: var(--color-main-01);
+    box-shadow:
+        inset 0 0 0 3px var(--color-main-02),
+        0 4px 12px rgba(0, 0, 0, .28);
+}
+
+/* ===== 인재채용 ===== */
+#content .inside_kumho .career{
+    height: 172px;
+    padding: 28px 48px;
+    
+}
+
+#content .inside_kumho .career p{ margin-top: 20px;}
+
+/* position absolute 버튼 */
+#content .inside_kumho .career > a{
+    right: 53px;
+    top: 59px;
+}
+
+/* ===== 홍보센터 ===== */
+#content .inside_kumho .news{
+    height: 280px;
+    margin-top: 29px;
+    padding: 36px 48px;
+}
+
+#content .inside_kumho .news p{ margin-top: 20px;}
+
+/* position absolute 버튼 */
+#content .inside_kumho .news > a{
+    left: 48px;
+    bottom: 40px;
+}
+
+/* ===== 홍보센터 이미지 ===== */
+#content .inside_kumho .news_img{
+    position: absolute;
+    right: 48px;
+    top: 36px;
+    width: 370px;
+    height: 208px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+#content .inside_kumho .news_img iframe{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+#content .inside_kumho .news_img .youtube_link{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    left: auto;
+    width: auto;
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 18px;
+    background: rgba(0, 0, 0, .78);
+    color: var(--color-white);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 36px;
+    box-shadow: none;
+    z-index: 2;
+}
+
+#content .inside_kumho .news_img .youtube_link:hover{
+    background: var(--color-main-01);
+    color: var(--color-white);
+    box-shadow: none;
+}
+
+#content .inside_kumho .news_img .youtube_link i{
+    margin-right: 6px;
+}
+
+
+/* ============================================================== */
+/* ==                       ARTERA POPUP                       == */
+/* ============================================================== */
+
+/* ===== 레이어 팝업 하단 컨트롤 ===== */
+#showimage > div:first-of-type img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.notice_popup_controls{
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+    justify-content: center;
+    column-gap: 6px;
+    row-gap: 12px;
+    margin-top: 20px;
+    color: var(--color-sub-01);
+    font-size: 14px;
+    line-height: 1;
+}
+
+.notice_popup_controls input[type="checkbox"]{
+    width: 14px;
+    height: 14px;
+    margin: 0;
+}
+
+.notice_popup_controls label{
+    line-height: 14px;
+}
+
+.notice_popup_controls a{
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin-left: 0;
+    color: var(--color-point-01);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 14px;
+}
+
+/* ===== main 내부 아테라 팝업 배치 ===== */
+.visual{position: relative; overflow: hidden;}
+#content .popup_layout{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 110;
+    width: 100%;
+    height: 930px;
+    overflow: hidden;
+    visibility: hidden;
+    pointer-events: none;
+    transition: visibility 0s linear .6s;
+}
+
+#content .popup_layout.open{
+    visibility: visible;
+    pointer-events: initial;
+    transition-delay: 0s;
+}
+
+/* 화면 전체에 검정색을 70% 농도로 덮기: 패널의 글자와 이미지는 어두워지지 않음 */
+#content .popup_dim{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .7);
+    opacity: 0;
+    transition: opacity .6s ease;
+}
+
+/* open 클래스 하나로 반투명 배경과 팝업의 움직임을 함께 제어 */
+#content .popup_layout.open .popup_dim{opacity: 1;}
+
+/* ===== 팝업 전체 레이아웃 ===== */
+#content .artera_popup_layout,
+body > .popup_layout .artera_popup_layout{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1467px;
+    height: 930px;
+    overflow: hidden;
+    background: var(--color-sub-02);
+    color: var(--color-point-01);
+    box-sizing: border-box;
+}
+
+/* 팝업은 오른쪽 바깥에서 시작해 열린 상태에서 화면 안으로 이동 */
+#content .popup_layout .artera_popup_layout{
+    z-index: 1;
+    transform: translateX(100%);
+    transition: transform .6s ease;
+}
+
+#content .popup_layout.open .artera_popup_layout{transform: translateX(0);}
+
+/* popup.html 단독 확인용 영역 */
+body > .popup_layout{
+    position: relative;
+    width: 100%;
+    min-width: 1467px;
+    height: 930px;
+    overflow: hidden;
+}
+
+/* ===== 왼쪽 장식 세로선 ===== */
+.artera_popup_layout::before,
+.artera_popup_layout::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 930px;
+}
+
+.artera_popup_layout::before{
+    left: 120px;
+    width: 3px;
+    background: var(--color-point-02);
+}
+
+.artera_popup_layout::after{
+    left: 135px;
+    width: 5px;
+    background: var(--color-point-01);
+}
+
+/* ===== CLOSE 버튼 ===== */
+.artera_popup_layout .close{
+    position: absolute;
+    left: 20px;
+    top: 465px;
+    width: 150px;
+    border: 0;
+    background: transparent;
+    color: var(--color-point-01);
+    text-align: center;
+    font-family: var(--font-family-en);
+    font-size: 1.5rem;
+    font-weight: 500;
+    transform: rotate(-90deg);
+    cursor: pointer;
+}
+
+/* ===== 팝업 상단 브랜드 소개 ===== */
+.artera_popup_layout .popup_header{color: var(--color-point-01);}
+
+/* 브랜드 소개 제목 */
+.artera_popup_layout .popup_header h3{
+    position: absolute;
+    left: 265px;
+    top: 35px;
+    font-size: 1.75rem;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* ARTERA 로고 */
+.artera_popup_layout .popup_header .logo{
+    position: absolute;
+    left: 265px;
+    top: 95px;
+    display: block;
+    width: 335px;
+    height: 145px;
+    object-fit: cover;
+}
+
+/* 브랜드 소개 본문 */
+.artera_popup_layout .popup_sub_group .section_sub{
+    font-size: 1.3rem;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+/* 소개 문구와 우측 이미지 카드 2개를 하나의 행으로 배치 */
+.artera_popup_layout .popup_sub_group{
+    position: absolute;
+    left: 265px;
+    top: 265px;
+    width: 1100px;
+    height: 265px;
+    display: flex;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+/* 팝업 소개 문구 너비 */
+.artera_popup_layout .popup_sub_group > .section_sub{flex: 0 0 410px;}
+
+/* 단지 정보와 분양 정보 카드 공통 배치 */
+/* 단지 정보 카드 */
+.artera_popup_layout .popup_sub_group .complex_info,
+/* 분양 정보 카드 */
+.artera_popup_layout .popup_sub_group .sales_info{
+    position: relative;
+    left: auto;
+    top: auto;
+    flex: 0 0 320px;
+    width: 320px;
+    height: 265px;
+}
+
+/* 본문 강조 문구 */
+.artera_popup_layout .popup_sub_group .section_sub span{
+    color: var(--color-point-02);
+    font-weight: 700;
+}
+
+/* ===== 콘텐츠 카드 공통 ===== */
+.artera_popup_layout .popup_card{
+    position: absolute;
+    overflow: hidden;
+    border-radius: 10px;
+    color: var(--color-white);
+}
+
+/* 카드 이미지 어두운 오버레이 */
+.artera_popup_layout .popup_card::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
+}
+
+/* ===== 브랜드 스토리 카드 ===== */
+.artera_popup_layout .brand_story{
+    left: 265px;
+    top: 560px;
+    width: 1100px;
+    height: 295px;
+}
+
+/* ===== 단지 정보 카드 ===== */
+.artera_popup_layout .complex_info{
+    left: 700px;
+    top: 265px;
+    width: 320px;
+    height: 265px;
+}
+
+/* ===== 분양 정보 카드 ===== */
+.artera_popup_layout .sales_info{
+    left: 1045px;
+    top: 265px;
+    width: 320px;
+    height: 265px;
+}
+
+/* ===== 카드 이미지 공통 ===== */
+.artera_popup_layout .popup_card > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ===== 카드 텍스트 공통 ===== */
+.artera_popup_layout .card_content{
+    position: absolute;
+    z-index: 1;
+    left: 30px;
+    bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+/* 카드 제목 */
+.artera_popup_layout .card_content h4{
+    color: var(--color-white);
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+}
+
+/* 카드 설명 */
+.artera_popup_layout .card_content p{
+    color: var(--color-white);
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+/* 자세히 보기 문구 */
+.artera_popup_layout .card_content .more{
+    color: var(--color-white);
+    font-size: var(--font-body-small-size);
+    font-weight: 400;
+}

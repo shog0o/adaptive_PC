@@ -1,0 +1,382 @@
+@charset "UTF-8";
+
+/* 기업소개 본문 전체 영역 */
+.content_area {
+    width: 1400px;
+    margin: 0 auto;
+}
+
+/* ===== 01 WHO WE ARE ===== */
+
+/* 섹션 레이아웃 */
+.about_who {
+    min-height: 650px;
+    padding: 170px 0 60px 800px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* 섹션 영문 제목 */
+.about_who .section_label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-bottom: 20px;
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-large-size);
+    line-height: 1;
+    color: var(--color-main-01);
+    font-weight: 600;
+}
+
+/* 섹션 제목 하단 포인트 선 */
+.about_who .section_label::after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--color-main-01);
+}
+
+/* 오른쪽 메인 문구 */
+.about_who .section_heading {
+    display: block;
+    margin-bottom: 35px;
+    font-size: var(--font-display-medium-size);
+    font-weight: 700;
+    word-break: keep-all;
+    text-align: right;
+}
+
+/* 오른쪽 본문 설명 */
+.about_who .section_desc {
+    font-size: var(--font-label-large-size);
+    color: var(--color-font-02);
+    word-break: keep-all;
+    text-align: right;
+}
+
+/* 섹션 제목 하단에서 45px 간격으로 배치되는 대표 이미지 */
+.about_who::before {
+    content: '';
+    width: 1090px;
+    height: 470px;
+    position: absolute;
+    left: -280px;
+    top: 120px;
+    background: url(../images/sub1/about_01.jpg) center / cover no-repeat;
+}
+
+
+/* ===== 02 EXPERIENCES ===== */
+
+/* 섹션 레이아웃 */
+.about_experience {
+    min-height: 650px;
+    margin-top: 190px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* 화면 전체 너비의 연회색 배경 */
+.about_experience::before {
+    content: '';
+    width: 1920px;
+    height: 650px;
+    position: absolute;
+    z-index: -1;
+    left: -260px;
+    top: 0;
+    background: var(--color-sub-01);
+}
+
+/* 섹션 영문 제목 */
+.about_experience .section_label {
+    position: absolute;
+    left: 0;
+    top: 90px;
+    padding-bottom: 20px;
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-large-size);
+    line-height: 1;
+    color: var(--color-main-01);
+    font-weight: 600;
+}
+
+/* 섹션 제목 하단 포인트 선 */
+.about_experience .section_label::after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--color-main-01);
+}
+
+/* 섹션 제목 하단에서 45px 간격으로 배치되는 메인 문구 */
+.about_experience .section_heading {
+    width: 500px;
+    position: absolute;
+    left: 115px;
+    top: 175px;
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+}
+
+/* 섹션 본문 설명 */
+.about_experience > .section_desc {
+    width: 520px;
+    position: absolute;
+    left: 770px;
+    top: 200px;
+    font-size: var(--font-label-large-size);
+    color: var(--color-font-01);
+}
+
+/* 경험 및 역량 목록 */
+.intro_list {
+    width: 1170px;
+    position: absolute;
+    left: 115px;
+    top: 405px;
+    display: flex;
+    gap: 90px;
+}
+
+/* 경험 및 역량 개별 항목 */
+.intro_item {
+    width: 330px;
+    padding-top: 30px;
+    border-top: 2px solid var(--color-main-02);
+    box-sizing: border-box;
+}
+
+/* 경험 및 역량 핵심 키워드 */
+.intro_item .keyword strong {
+    display: block;
+    font-family: var(--font-family-en);
+    font-size: var(--font-h4-size);
+    line-height: 1.2;
+    color: var(--color-black);
+}
+
+.intro_item .keyword span {
+    display: block;
+    margin-top: 10px;
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 500;
+    color: var(--color-main-01);
+}
+
+/* 경험 및 역량 항목 설명 */
+.intro_item > p {
+    margin-top: 30px;
+    font-size: var(--font-label-large-size);
+    color: var(--color-font-01);
+}
+
+/* ===== 03 OUR DIRECTION ===== */
+
+/* 섹션 레이아웃 */
+.about_direction {
+    min-height: 730px;
+    margin-top: 100px;
+    position: relative;
+    color: var(--color-white);
+    box-sizing: border-box;
+}
+
+/* 화면 전체 너비의 다크 배경 */
+.about_direction::before {
+    content: '';
+    width: 1920px;
+    height: 730px;
+    position: absolute;
+    z-index: -1;
+    left: -260px;
+    top: 0;
+    background: #141417;
+}
+
+/* 섹션 영문 제목 */
+.about_direction .section_label {
+    position: absolute;
+    left: 0;
+    top: 90px;
+    padding-bottom: 20px;
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-large-size);
+    line-height: 1;
+    color: var(--color-main-01);
+    font-weight: 600;
+}
+
+/* 섹션 제목 하단 포인트 선 */
+.about_direction .section_label::after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--color-main-01);
+}
+
+/* 섹션 제목 하단에서 45px 간격으로 배치되는 메인 문구 */
+.about_direction .section_heading {
+    width: 600px;
+    position: absolute;
+    left: 115px;
+    top: 175px;
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+}
+
+/* 섹션 본문 설명 */
+.about_direction > .section_desc {
+    width: 470px;
+    position: absolute;
+    left: 815px;
+    top: 200px;
+    font-size: var(--font-label-large-size);
+    color: var(--color-light-gray);
+}
+
+/* 기업 방향성 목록 */
+.direction_list {
+    width: 1170px;
+    position: absolute;
+    left: 115px;
+    top: 410px;
+    display: flex;
+    gap: 90px;
+}
+
+/* 기업 방향성 개별 항목 */
+.direction_item {
+    width: 330px;
+    padding-top: 25px;
+    border-top: 1px solid var(--color-font-02);
+    box-sizing: border-box;
+}
+
+.direction_item .num {
+    display: block;
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-large-size);
+    color: var(--color-main-01);
+}
+
+.direction_item > strong {
+    display: block;
+    margin-top: 20px;
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-xlarge-size);
+    line-height: 1.2;
+}
+
+.direction_item .ko {
+    display: block;
+    margin-top: 25px;
+    font-size: var(--font-label-medium-size);
+    color: var(--color-light-gray);
+}
+
+/* 기업 방향성 항목 설명 */
+.direction_item > p {
+    margin-top: 30px;
+    font-size: var(--font-label-large-size);
+    color: var(--color-light-gray);
+}
+
+/* ===== 04 CEO MESSAGE ===== */
+
+/* 섹션 레이아웃 */
+.about_ceo {
+    min-height: 1125px;
+    position: relative;
+    box-sizing: border-box;
+    margin: 60px 0 150px;
+}
+
+/* 섹션 영문 제목 */
+.about_ceo .section_label {
+    position: absolute;
+    left: 0;
+    top: 40px;
+    padding-bottom: 20px;
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-large-size);
+    line-height: 1;
+    color: var(--color-main-01);
+    font-weight: 600;
+}
+
+/* 섹션 제목 하단 포인트 선 */
+.about_ceo .section_label::after {
+    content: '';
+    width: 80px;
+    height: 2px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: var(--color-main-01);
+}
+
+/* 섹션 제목 하단에서 45px 간격으로 배치되는 CEO 비주얼 */
+.about_ceo::before {
+    content: '';
+    width: 1400px;
+    height: 475px;
+    position: absolute;
+    left: 0;
+    top: 125px;
+    background: url(../images/sub1/about_ceo_img.webp) 120px bottom / 395px 475px no-repeat,
+                var(--color-sub-01);
+}
+
+/* CEO 핵심 메시지 */
+.about_ceo .section_heading {
+    width: 650px;
+    position: absolute;
+    left: 705px;
+    top: 375px;
+    z-index: 1;
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+}
+
+/* CEO 인사말 본문 */
+.about_ceo .ceo_message {
+    width: 1165px;
+    position: absolute;
+    left: 120px;
+    top: 650px;
+    font-size: var(--font-label-large-size);
+    color: var(--color-black);
+}
+
+/* CEO 직함 및 이름 */
+.about_ceo .ceo_name {
+    position: absolute;
+    right: 280px;
+    top: 970px;
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    color: var(--color-black);
+}
+
+/* CEO 서명 이미지 */
+.about_ceo .ceo_name::after {
+    content: '';
+    width: 140px;
+    height: 65px;
+    position: absolute;
+    left: 325px;
+    top: -20px;
+    background: url(../images/sub1/about_ceo_signature.webp) center / contain no-repeat;
+}

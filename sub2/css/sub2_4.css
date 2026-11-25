@@ -1,0 +1,534 @@
+@charset "UTF-8";
+
+/* sub2_4 사업실적 */
+
+/* ===== 공통 섹션 제목 ===== */
+
+#content .sec_tit{
+    color: #141417;
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    word-break: keep-all;
+}
+
+#content .sec_tit .sec_label{
+    position: relative;
+    display: block;
+    margin-bottom: 48px;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-display-xsmall-size);
+    font-weight: 600;
+    line-height: 1.5;
+    letter-spacing: 0;
+}
+
+#content .sec_tit .sec_label::after{
+    content: '';
+    width: 80px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    bottom: -19px;
+    background: var(--color-main-01);
+}
+
+#content .sec_desc{
+    color: #6B6B70;
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.5;
+    word-break: keep-all;
+}
+
+/* ========================================
+   01 PROJECT SEARCH
+======================================== */
+
+#content .project_search{
+    width: 1400px;
+    min-height: 660px;
+    margin: 0 auto;
+    padding: 42px 0 60px;
+    box-sizing: border-box;
+}
+
+/* ===== 검색 섹션 소개 ===== */
+
+#content .project_search .section_intro{
+    height: 150px;
+    position: relative;
+}
+
+#content .project_search .sec_tit{
+    width: 620px;
+}
+
+#content .project_search .sec_desc{
+    width: 600px;
+    position: absolute;
+    right: 0;
+    top: 70px;
+    line-height: 1.6;
+    text-align: right;
+}
+
+/* ===== 프로젝트 검색 ===== */
+
+#content .search_area{
+    margin-top: 50px;
+}
+
+#content .search_title{
+    display: block;
+    color: #333;
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .project_search_box{
+    width: 1400px;
+    height: 84px;
+    margin-top: 16px;
+    display: flex;
+}
+
+#content .search_input_box{
+    width: 1180px;
+    height: 84px;
+}
+
+#content .search_input_box input{
+    width: 100%;
+    height: 100%;
+    padding: 0 70px;
+    border: 1px solid #141417;
+    outline: none;
+    box-sizing: border-box;
+    background: var(--color-white);
+    color: #333;
+    font-family: var(--font-family-kr);
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#content .search_input_box input::placeholder{
+    color: #6B6B70;
+    opacity: 1;
+}
+
+#content .search_input_box input:focus{
+    border-color: var(--color-main-01);
+}
+
+#content .search_btn{
+    width: 220px;
+    height: 84px;
+    border: 0;
+    box-sizing: border-box;
+    background: var(--color-main-01);
+    color: var(--color-white);
+    font-family: var(--font-family-kr);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+/* ===== 상세 검색 ===== */
+
+#content .filter_area{
+    width: 1400px;
+    min-height: 210px;
+    margin-top: 32px;
+    padding: 28px 32px;
+    border: 1px solid #D9DBDE;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background: #F6F7F8;
+}
+
+/* 상단 */
+
+#content .filter_top{
+    min-height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#content .filter_top > strong{
+    color: #333;
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .filter_reset{
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: #6B6B70;
+    font-family: var(--font-family-kr);
+    font-size: var(--font-body-small-size);
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+#content .filter_reset i{
+    margin-right: 6px;
+}
+
+/* 필터 본문 */
+
+#content .filter_inner{
+    height: 48px;
+    margin-top: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ===== 사업분야 ===== */
+
+#content .filter_business{
+    width: 472px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+#content .filter_chip_box{
+    width: 472px;
+    height: 48px;
+    display: flex;
+    gap: 8px;
+}
+
+#content .filter_chip{
+    width: 112px;
+    height: 48px;
+    padding: 0;
+    border: 1px solid #D9DBDE;
+    border-radius: 24px;
+    box-sizing: border-box;
+    background: var(--color-white);
+    color: #333;
+    font-family: var(--font-family-kr);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+#content .filter_chip.active{
+    border-color: var(--color-main-01);
+    background: var(--color-main-01);
+    color: var(--color-white);
+}
+
+/* ===== 지역 ===== */
+
+#content .filter_region{
+    width: 356px;
+    height: 48px;
+    margin-left: auto;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-shrink: 0;
+}
+
+#content .filter_region label{
+    width: 56px;
+    color: #6B6B70;
+    font-size: var(--font-body-small-size);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#content .filter_region select{
+    width: 300px;
+    height: 48px;
+}
+
+/* ===== 필터 select 공통 ===== */
+
+#content .filter_region select{
+    padding: 0 46px 0 18px;
+    border: 1px solid #D9DBDE;
+    border-radius: 2px;
+    outline: none;
+    box-sizing: border-box;
+    background: var(--color-white);
+    color: #333;
+    font-family: var(--font-family-kr);
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+/* select 기본 화살표 제거 */
+
+#content .filter_region select,
+#content .result_sort select{
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+/* 화살표 */
+
+#content .filter_region::after{
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    border-right: 1px solid #666;
+    border-bottom: 1px solid #666;
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+/* 안내문 */
+
+#content .filter_info{
+    margin-top: 25px;
+    color: #6B6B70;
+    font-size: var(--font-body-small-size);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* ========================================
+   02 PROJECT LIST
+======================================== */
+
+#content .project_results{
+    width: 1400px;
+    min-height: 1580px;
+    margin: 0 auto;
+    padding: 60px 0 140px;
+    box-sizing: border-box;
+}
+
+/* ===== 결과 상단 ===== */
+
+#content .result_header{
+    min-height: 180px;
+    position: relative;
+}
+
+#content .result_title_inner{
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+}
+
+#content .result_title_inner .sec_tit{
+    width: auto;
+    min-width: 310px;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+
+#content .result_title_inner .sec_tit .sec_label{
+    margin-bottom: 54px;
+}
+
+#content .result_count{
+    margin-bottom: 7px;
+    display: block;
+    color: var(--color-main-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .result_title > .sec_desc{
+    margin-top: 16px;
+}
+
+/* ===== 정렬 ===== */
+
+#content .result_sort{
+    width: 220px;
+    height: 48px;
+    position: absolute;
+    right: 0;
+    top: 80px;
+}
+
+#content .result_sort select{
+    width: 100%;
+    height: 100%;
+    padding: 0 48px 0 18px;
+    border: 1px solid #DBDEE0;
+    border-radius: 2px;
+    outline: none;
+    box-sizing: border-box;
+    background: var(--color-white);
+    color: #333;
+    font-family: var(--font-family-kr);
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+#content .result_sort::after{
+    content: '';
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 20px;
+    top: 17px;
+    border-right: 1px solid #666;
+    border-bottom: 1px solid #666;
+    transform: rotate(45deg);
+    pointer-events: none;
+}
+
+/* ===== 프로젝트 목록 ===== */
+
+#content .project_results .project_list{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px 40px;
+}
+
+#content .project_results .project_list li{
+    width: 440px;
+    height: 510px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#content .project_results .project_list li::after{
+    content: '';
+    width: 440px;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    bottom: 15px;
+    background: #DBDEE0;
+}
+
+#content .project_results .project_list .no_result{
+    width: 100%;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #DBDEE0;
+    border-bottom: 1px solid #DBDEE0;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+}
+
+#content .project_results .project_list .no_result::after{
+    display: none;
+}
+
+/* 프로젝트 이미지 */
+
+#content .project_img{
+    width: 440px;
+    height: 300px;
+    overflow: hidden;
+    background: #F7F8F9;
+}
+
+#content .project_img img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* 프로젝트 정보 */
+
+#content .project_info{
+    width: 440px;
+}
+
+#content .project_category{
+    margin-top: 24px;
+    display: block;
+    color: var(--color-main-01);
+    font-family: var(--font-family-kr);
+    font-size: var(--font-body-small-size);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+#content .project_name{
+    margin-top: 10px;
+    display: block;
+    color: #141417;
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .project_meta{
+    min-height: 21px;
+    margin-top: 12px;
+    color: #6B6B70;
+    font-size: var(--font-body-small-size);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#content .project_meta > span:first-child{
+    width: 100%;
+    display: block;
+}
+
+/* ===== 페이지네이션 ===== */
+
+#content .pagination{
+    width: 400px;
+    height: 48px;
+    margin: 80px auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+#content .pagination a{
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 24px;
+    box-sizing: border-box;
+    color: #333;
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+#content .pagination a.active{
+    background: var(--color-main-01);
+    color: var(--color-white);
+    font-weight: 700;
+}
+
+#content .pagination .page_prev,
+#content .pagination .page_next{
+    font-size: var(--font-h5-size);
+}

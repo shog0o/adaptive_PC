@@ -1,0 +1,795 @@
+@charset "UTF-8";
+
+/* 모든페이지 공통 css */
+/* header, footer에 관한 내용도 여기에 들어감 */
+
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* font-family: "Noto Sans KR", sans-serif; */
+/* font-family: "Inter", sans-serif; */
+
+
+/* css variable */
+:root{
+    /* === Font Family === */
+    --font-family-kr: "Noto Sans KR", sans-serif;
+    --font-family-en: "Inter", sans-serif;
+
+    /* === Font Size === */
+
+    /* Display */
+    --font-display-large-size: 4.5rem;      /* 72px */
+    --font-display-medium-size: 3rem;       /* 48px */
+    --font-display-small-size: 2.25rem;     /* 36px */
+    --font-display-xsmall-size: 1.25rem;    /* 20px */
+
+    /* Heading */
+    --font-h2-size: 3.75rem;                /* 60px */
+    --font-h3-size: 3.13rem;                /* 50px */
+    --font-h4-size: 2.50rem;                /* 40px */
+    --font-h5-size: 1.88rem;                /* 30px */
+    --font-h6-size: 1.50rem;                /* 24px */
+
+    /* Body */
+    --font-body-xlarge-size: 1.5rem;        /* 24px */
+    --font-body-large-size: 1.25rem;        /* 20px */
+    --font-body-medium-size: 1rem;          /* 16px */
+    --font-body-small-size: 0.88rem;        /* 14px */
+
+    /* Label */
+    --font-label-large-size: 1.125rem;      /* 18px */
+    --font-label-medium-size: 1rem;         /* 16px */
+    --font-label-small-size: 0.88rem;       /* 14px */
+
+    /* Navigation */
+    --font-navigation-title-size: 1.188rem; /* 19px */
+    --font-navigation-depth-size: 1rem;     /* 16px */
+
+    /* === Main Color === */
+    --color-main-01: #ED1C24;
+    --color-main-02: #454A51;
+
+    /* === Point Color === */
+    --color-point-01: #242A5C;
+    --color-point-02: #F47F3F;
+    --color-point-03: #C1DAF2;
+    --color-point-04: #FAEADB;
+
+    /* === Sub Color === */
+    --color-sub-01: #f4f4f4;
+    --color-sub-02: #FFF4F4;
+
+    /* === Font Color === */
+    --color-font-01: #333333;
+    --color-font-02: #666666;
+    --color-font-03: #999999;
+
+    /* === Grayscale === */
+    --color-white: #FFFFFF;
+    --color-light-gray: #CCCCCC;
+    --color-dark-gray: #3D3D3D;
+    --color-black: #000000;
+}
+
+
+/* 서브페이지 타이틀과 본문 사이 공통 간격 */
+#content .title_area{
+    padding: 150px 0;
+}
+
+#content .title_area + .content_area{
+    display: flow-root;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 16px;
+    /* scroll-behavior: smooth; */
+    scrollbar-gutter: stable;
+}
+
+body{
+    font-family: var(--font-family-kr);
+    color: var(--color-font-01);
+    letter-spacing: -0.0188rem;
+    line-height: 1.6;
+}
+
+a{
+    color: var(--color-font-01);
+    text-decoration: none;
+    display: block;
+}
+
+ol,ul{list-style: none;}
+
+table{border-collapse: collapse;}
+
+address{font-style: normal;}
+
+img{border: 0;vertical-align: top;}
+
+.hidden{
+    position: absolute;
+    left: -1000%;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    color: var(--color-white);
+    display: block;
+}
+
+
+/* skip navigation */
+#skipNav{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    z-index: 110;
+}
+
+#skipNav a{
+    height: 1px;
+    margin-bottom: -1px;
+    overflow: hidden;
+    text-align: center;
+    color: var(--color-white);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+#skipNav a:focus{
+    height: auto;
+    padding: 5px 0;
+    background: var(--color-main-02);
+}
+
+
+/* 구글아이콘 폰트 공통스타일 */
+.material-symbols-outlined{
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+}
+
+
+/* 전체 페이지 영역 설정 및 넘치는 콘텐츠 숨김 */
+#wrap{width: 100%; overflow: hidden;}
+
+
+/* =========================
+   공통 Header
+========================= */
+
+#headerArea{
+    width: 100%;
+    height: 90px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, .72);
+    backdrop-filter: blur(14px) saturate(140%);
+    border-bottom: 1px solid rgba(255, 255, 255, .55);
+    box-shadow: 0 4px 20px rgba(17, 17, 17, .06);
+    overflow: hidden;
+    transition: background .5s;
+}
+
+
+/* =========================
+   Header 내부
+========================= */
+
+#headerArea .header_inner{
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* =========================
+   Logo
+========================= */
+
+#headerArea .logo{
+    width: 175px;
+    height: 50px;
+    flex: 0 0 175px;
+}
+
+#headerArea .logo a{
+    display: block;
+    width: 175px;
+    height: 50px;
+    background: url(../images/kumhoenc_logo_KO_01.png) no-repeat center;
+    background-size: contain;
+    text-indent: -10000px;
+    overflow: hidden;
+}
+
+
+/* =========================
+   GNB
+========================= */
+
+#headerArea #gnb{
+    width: 980px;
+    height: 90px;
+    flex: 0 0 980px;
+}
+
+
+/* 1depth 전체 */
+#headerArea #gnb .dropdownmenu{
+    width: 100%;
+    display: flex;
+}
+
+
+/* 각 1depth 메뉴 */
+#headerArea #gnb .dropdownmenu > .menu{
+    width: 16.666%;
+    height: 90px;
+    position: relative;
+    transition: background-color .2s ease-out;
+}
+
+
+/* h3 */
+#headerArea #gnb .dropdownmenu > .menu > h3{
+    width: 100%;
+    height: 100%;
+}
+
+
+/* =========================
+   1depth 링크
+========================= */
+
+#headerArea #gnb .dropdownmenu > .menu > h3 .depth1{
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-font-01);
+    font-size: var(--font-navigation-title-size);
+    line-height: 1;
+    text-align: center;
+    transition: color .3s;
+}
+
+/* Turner Construction GNB 참고: 상단 포인트 바가 좌측에서 우측으로 펼쳐지는 효과 */
+#headerArea #gnb .dropdownmenu > .menu > h3 .depth1::after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 5px;
+    background: var(--color-main-01);
+    transition: width .2s ease-out;
+}
+
+/* Turner Construction GNB 참고: 현재 메뉴 칸 강조 및 포인트 바 확장 */
+#headerArea #gnb .dropdownmenu > .menu:hover,
+#headerArea #gnb .dropdownmenu > .menu:focus-within{
+    background: var(--color-sub-02);
+}
+
+#headerArea #gnb .dropdownmenu > .menu:hover > h3 .depth1::after,
+#headerArea #gnb .dropdownmenu > .menu:focus-within > h3 .depth1::after,
+#headerArea #gnb .dropdownmenu > .menu > h3 .depth1.active::after{
+    width: 100%;
+}
+
+/* 1depth hover */
+#headerArea #gnb .dropdownmenu > .menu:hover > h3 .depth1,
+#headerArea #gnb .dropdownmenu > .menu:focus-within > h3 .depth1{
+    color: var(--color-main-01);
+}
+
+
+/* 아테라 아이콘 */
+#headerArea #gnb .dropdownmenu > .menu > h3 img{
+    width: auto;
+    height: 20px;
+}
+
+
+/* =========================
+   2depth
+========================= */
+
+#headerArea #gnb .dropdownmenu > .menu > ul{
+    width: 100%;
+    height: 210px;
+    position: absolute;
+    left: 0;
+    top: 90px;
+    box-sizing: border-box;
+    padding: 10px 0 20px;
+}
+
+/* hover된 1depth 열의 2depth는 투명도 없는 흰색 배경으로 표시 */
+#headerArea #gnb .dropdownmenu > .menu:hover > ul,
+#headerArea #gnb .dropdownmenu > .menu:focus-within > ul{
+    background: var(--color-white);
+}
+
+
+/* 2depth li */
+#headerArea #gnb .dropdownmenu > .menu > ul > li{
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+/* 2depth 링크 */
+#headerArea #gnb .dropdownmenu > .menu > ul > li > a{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 9px 4px;
+    color: #333;
+    font-size: var(--font-navigation-depth-size);
+}
+
+
+/* 2depth hover */
+#headerArea #gnb .dropdownmenu  .menu  ul  li  a:hover{
+    color: #fff;
+    font-weight: 600;
+    background: var(--color-main-02);
+    /* border-radius: 15px; */
+  }
+
+
+/* =========================
+   Top Menu
+========================= */
+
+#headerArea .top_menu{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#headerArea .top_menu li a{
+    color: var(--color-font-01);
+}
+
+
+
+/* 공통 footer 영역 */
+#footerArea{
+    width: 100%;
+    height: 306px;
+    background: var(--color-black);
+    color: var(--color-white);
+    border-top: 1px solid #333;
+}
+
+#footerArea .footer_inner{
+    width: 1400px;
+    height: 306px;
+    margin: 0 auto;
+    padding-top: 90px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* ===== footer 왼쪽 ===== */
+
+#footerArea .footer_left{width: 400px;}
+
+#footerArea .footer_logo img{
+    width: 197px;
+    height: auto;
+}
+
+#footerArea .copyright{
+    margin-top: 50px;
+    display: block;
+    font-size: var(--font-body-small-size);
+    color: var(--color-sub-01);
+}
+
+/* ===== footer 오른쪽 ===== */
+
+#footerArea .footer_right{
+    width: 343px;
+    text-align: right;
+}
+
+/* ===== Family Site + SNS ===== */
+
+#footerArea .footer_top{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+
+
+#footerArea .select{
+    width: 160px;
+    position: relative;
+}
+
+#footerArea .select .arrow{
+    width: 160px;
+    height: 31px;
+    padding: 0 10px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--color-sub-01);
+    border-radius: 4px;
+    background: var(--color-white);
+    color: var(--color-main-02);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-small-size);
+    box-sizing: border-box;
+}
+
+#footerArea .select .arrow span{
+    margin-left: 10px;
+    color: var(--color-main-01);
+}
+
+#footerArea .select .aList{
+    width: 160px;
+    padding: 5px 0;
+    position: absolute;
+    left: 0;
+    bottom: 36px;
+    z-index: 10;
+    box-sizing: border-box;
+    border: 1px solid var(--color-sub-01);
+    border-radius: 4px;
+    background: var(--color-white);
+    display: none;
+}
+
+#footerArea .select .aList a{
+    padding: 7px 16px;
+    color: var(--color-main-02);
+    font-size: var(--font-body-small-size);
+    text-align: left;
+}
+
+/* 마우스 클릭 후 남는 focus는 제외하고 hover와 키보드 초점만 강조 */
+#footerArea .select .aList a:hover,
+#footerArea .select .aList a:focus-visible{
+    color: var(--color-white);
+    background: var(--color-main-01);
+}
+
+#footerArea .select .aList a:focus-visible{
+    outline: 2px solid var(--color-main-02);
+    outline-offset: -2px;
+}
+
+/* ===== SNS ===== */
+
+#footerArea .sns{
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#footerArea .sns li{
+    width: 25px;
+    height: 25px;
+}
+
+#footerArea .sns li a{
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+}
+
+#footerArea .sns li i,
+#footerArea .sns li .svg-inline--fa{
+    width: 25px;
+    height: 25px;
+    display: block;
+    font-size: 25px;
+}
+
+/* ===== 하단 링크 ===== */
+
+#footerArea .footer_link{
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+#footerArea .footer_link a{
+    font-size: var(--font-body-small-size);
+    line-height: 21px;
+    color: var(--color-white);
+    text-decoration: underline;
+}
+
+#footerArea .footer_link li:last-child a{
+    color: var(--color-main-01);
+    font-weight: 700;
+}
+
+/* ===== 주소 ===== */
+
+#footerArea address{
+    margin-top: 13px;
+    font-size: var(--font-body-small-size);
+    line-height: 1.7;
+    color: var(--color-white);
+}
+
+/* ===== TOP BUTTON ===== */
+
+.top_move{
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    background: var(--color-main-02);
+    border-radius: 50%;
+    z-index: 100;
+    display: none;
+}
+
+/* 로고 */
+
+.top_move img{
+    width: 20px;
+    height: auto;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 9px;
+    z-index: 1;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+/* 텍스트 */
+
+.top_move span{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 11px;
+    z-index: 1;
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 600;
+    color: var(--color-white);
+    line-height: 1;
+    display: block;
+    text-align: center;
+    pointer-events: none;
+}
+
+/* ===== TOP BUTTON SCROLL PROGRESS ===== */
+
+/* SVG 전체 */
+.top_move .top_progress{
+    width: 60px;
+    height: 60px;
+    shape-rendering: geometricPrecision;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-90deg);
+    overflow: visible;
+}
+
+
+/* 게이지 배경 */
+.top_move .progress_bg{
+    fill: none;
+    /* 진행 전의 원형 가이드선 */
+    stroke: rgba(255,255,255,.35);
+    stroke-width: 2;
+}
+
+/* 실제로 차오르는 게이지 */
+.top_move .progress_bar{
+    fill: none;
+    /* 스크롤할수록 채워지는 실제 진행선 */
+    stroke: var(--color-main-01);
+    stroke-width: 2;
+    stroke-linecap: round;
+    /* r = 28.5 원 둘레 = 약 179.1  */
+    stroke-dasharray: 179.1;
+    stroke-dashoffset: 179.1;
+    transition: stroke-dashoffset .1s linear;
+}
+
+/* ========================================================
+   푸터 약관 모달 팝업
+======================================================== */
+
+/* 팝업 바깥의 반투명 배경 */
+.footer_policy_modal{
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 300;
+    background: rgba(0,0,0,.65);
+    backdrop-filter: blur(4px);
+}
+
+/* 실제 약관 내용이 들어가는 흰색 팝업 */
+.footer_policy_inner{
+    width: 900px;
+    max-width: calc(100% - 80px);
+    max-height: calc(100vh - 80px);
+    padding: 55px 55px 45px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: var(--color-white);
+    border-radius: 20px;
+    transform: translate(-50%,-50%);
+}
+
+/* 팝업 닫기 버튼 */
+.footer_policy_close{
+    width: 44px;
+    height: 44px;
+    position: absolute;
+    right: 25px;
+    top: 22px;
+    border: 0;
+    color: var(--color-font-01);
+    background: transparent;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* 팝업 제목 */
+.footer_policy_title{
+    margin: 0 55px 25px 0;
+    color: var(--color-font-01);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* 내용이 길어질 경우 팝업 내부에서만 스크롤 */
+.footer_policy_scroll{
+    max-height: calc(100vh - 220px);
+    padding-right: 18px;
+    overflow-y: auto;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.8;
+}
+
+/* 두 정책 내용은 클릭한 푸터 링크에 맞춰 JavaScript에서 교체 */
+.footer_policy_panel{display: none;}
+
+.footer_policy_panel > p{margin-bottom: 18px;}
+
+.footer_policy_panel .policy_notice{
+    padding: 18px 20px;
+    color: var(--color-main-01);
+    background: var(--color-sub-02);
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.footer_policy_subtitle{
+    display: block;
+    margin: 34px 0 12px;
+    color: var(--color-font-01);
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.footer_policy_panel ol,
+.footer_policy_panel ul{
+    margin: 0 0 18px 24px;
+}
+
+/* reset CSS로 사라진 목록 표시를 약관 영역에서만 다시 적용 */
+.footer_policy_panel ol{
+    list-style: decimal;
+}
+
+.footer_policy_panel ul{
+    margin-left: 0;
+    list-style: none;
+}
+
+.footer_policy_panel li{margin-bottom: 4px;}
+
+/* 일반 목록 앞에는 전달받은 원문처럼 하이픈 불릿 표시 */
+.footer_policy_panel ul li{
+    position: relative;
+    padding-left: 18px;
+}
+
+.footer_policy_panel ul li::before{
+    content: '-';
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.footer_policy_panel .policy_date{
+    margin-top: 35px;
+    color: var(--color-font-01);
+    font-weight: 700;
+}
+
+/* 이메일 무단수집 거부 문구는 짧으므로 읽기 편한 간격으로 배치 */
+.footer_policy_panel.email_policy{
+    padding: 20px 0 10px;
+    font-size: var(--font-label-large-size);
+    line-height: 2;
+}
+
+@media screen and (max-width: 768px){
+    .footer_policy_inner{
+        max-width: calc(100% - 32px);
+        max-height: calc(100vh - 32px);
+        padding: 45px 24px 30px;
+        border-radius: 14px;
+    }
+
+    .footer_policy_close{
+        right: 14px;
+        top: 12px;
+    }
+
+    .footer_policy_title{
+        margin-right: 35px;
+        font-size: 1.75rem;
+    }
+
+    .footer_policy_scroll{
+        max-height: calc(100vh - 160px);
+        padding-right: 10px;
+    }
+}

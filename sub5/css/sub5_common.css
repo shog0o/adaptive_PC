@@ -1,0 +1,151 @@
+@charset "UTF-8";
+/* 회사소개 depth 공통 영역 */
+
+/* ===== 서브 비주얼 영역 ===== */
+
+.visual{
+    height: 400px;
+    /* 고정 헤더(90px) 아래에서 비주얼 시작 */
+    margin-top: 90px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 화면 폭을 채우면서 이미지 비율 유지 */
+.visual > img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== 비주얼텍스트 전체 ===== */
+.visual .visual_txt{
+    width: 720px;
+    position: absolute;
+    top: 126px;
+    left: max(30px, calc(50% - 700px));
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    color: var(--color-white);
+    word-break: keep-all;
+}
+
+/* 영문 카테고리*/
+.visual .visual_en{
+    width: 100%;
+    font-family: "Inter", sans-serif;
+    font-size: var(--font-label-small-size);
+    font-weight: 300;
+    line-height: 18px;
+}
+
+/* 비주얼 제목 */
+.visual .visual_txt strong{
+    width: 100%;
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 59.4px;
+ }
+
+/* 비주얼 설명 */
+.visual .visual_ko{
+    width: 100%;
+    font-size: var(--font-label-large-size);
+    font-weight: 400;
+    line-height: 28.8px;
+}
+
+
+ /* 서브메뉴영역 */
+.sub_nav{
+    height: 76px;
+    padding: 8px 0;
+    box-sizing: border-box;
+}
+.sub_nav ul{
+    width: 1000px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 11px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-sub-01);
+    border-radius: 100px;
+}
+.sub_nav ul li{
+    width: 170px;
+    text-align: center;
+}
+.sub_nav ul li a{
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: var(--font-label-large-size);
+    font-weight: 700;
+    line-height: 1;
+    color: var(--color-font-01);
+    border-radius: 50px;
+    transition: all .5s ease-out;
+}
+
+.sub_nav ul li:hover a,
+.sub_nav ul li .active{
+    background: var(--color-main-01);
+    color: var(--color-sub-02);
+}
+
+/* 본문타이틀영역 */
+
+#content .title_area{
+    width: 1400px;
+    margin: 0 auto;
+    padding: 150px 0;
+    position: relative;
+}
+
+#content .title_area .line_map{
+    position: absolute;
+    right: 0;
+    top: 40px;
+    font-size: var(--font-label-small-size);
+}
+
+#content .title_area h2{
+    text-align: center;
+    font-size: var(--font-h2-size);
+    line-height: 55px;
+    color: var(--color-main-02);
+}
+
+/* 제목 글자를 기준으로 가운데 정렬 */
+#content .title_area h2 .title_main{
+    display: inline-block;
+    position: relative;
+}
+
+/* 페이지 제목 우측 상단 금호건설 심볼 */
+#content .title_area h2 .title_main img{
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: calc(100% - 1px);
+    top: -25px;
+    object-fit: contain;
+}
+
+#content .title_area h2 .title_en{
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: var(--font-label-small-size);
+    line-height: normal;
+    margin-top: 20px;
+    display: block;
+    color: var(--color-font-02);
+}

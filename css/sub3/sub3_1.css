@@ -1,0 +1,317 @@
+@charset "UTF-8";
+
+/* sub3_1 브랜드 스토리 전용 스타일 */
+#content .brand_essence,
+#content .brand_name,
+#content .brand_story,
+#content .brand_values {
+    padding: 56px 6%;
+    box-sizing: border-box;
+}
+
+/* 각 영역의 영문 번호 제목 */
+#content .section_heading {
+    margin: 0;
+}
+
+#content .section_label {
+    display: block;
+    color: var(--color-point-02);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* 01 브랜드 핵심 */
+#content .brand_essence {
+    background: var(--color-white);
+}
+
+#content .essence_image {
+    width: 100%;
+    height: 220px;
+    margin-top: 28px;
+    overflow: hidden;
+}
+
+#content .essence_image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#content .essence_copy {
+    padding: 28px 20px;
+    box-sizing: border-box;
+    background: #f0d5ba;
+    text-align: center;
+}
+
+#content .essence_copy .copy_label {
+    display: block;
+    color: var(--color-point-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+}
+
+#content .essence_copy > strong {
+    display: block;
+    margin-top: 14px;
+    color: var(--color-font-01);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.55;
+}
+
+#content .essence_copy p {
+    margin: 16px 0 0;
+    color: var(--color-font-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+/* 02 브랜드 이름 */
+#content .brand_name {
+    background: #f0d5ba;
+}
+
+#content .brand_formula {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 32px;
+    color: var(--color-point-01);
+}
+
+#content .brand_word {
+    width: 24%;
+    min-width: 0;
+    text-align: center;
+}
+
+#content .brand_word:nth-of-type(2) {
+    width: 34%;
+}
+
+#content .brand_word img {
+    display: block;
+    width: 100%;
+    height: 20px;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+#content .brand_word span {
+    display: block;
+    margin-top: 14px;
+    color: var(--color-point-01);
+    font-size: var(--font-label-small-size);
+    font-weight: 400;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+#content .formula_plus {
+    display: block;
+    width: 5%;
+    color: var(--color-point-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 20px;
+    text-align: center;
+}
+
+/* 03 아테라 스토리 */
+#content .brand_story {
+    background: var(--color-point-03);
+}
+
+#content .section_heading .heading_text {
+    display: block;
+    margin-top: 28px;
+    color: var(--color-point-01);
+    font-size: var(--font-h4-size);
+    font-weight: 700;
+    line-height: 1.55;
+}
+
+#content .brand_story .heading_text {
+    text-align: center;
+}
+
+#content .story_image {
+    width: 100%;
+    height: 210px;
+    margin-top: 28px;
+    overflow: hidden;
+}
+
+#content .story_image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#content .story_copy {
+    margin-top: 28px;
+    padding: 28px 18px;
+    box-sizing: border-box;
+    background: var(--color-point-01);
+    color: var(--color-white);
+    text-align: center;
+}
+
+#content .story_copy strong {
+    display: block;
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.55;
+}
+
+#content .story_copy p {
+    margin: 16px 0 0;
+    font-size: var(--font-body-medium-size);
+    font-weight: 400;
+    line-height: 1.75;
+}
+
+/* 04 핵심 가치 */
+#content .brand_values {
+    background: var(--color-white);
+}
+
+#content .value_list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 16px;
+    width: 100%;
+    margin-top: 32px;
+}
+
+#content .value_list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 48%;
+    min-height: 112px;
+    padding: 18px 8px;
+    box-sizing: border-box;
+    border: 2px solid #e1e3e9;
+    background: var(--color-white);
+    text-align: center;
+}
+
+#content .value_list li:first-child {
+    border-radius: 10px 0 0;
+}
+
+#content .value_list li:nth-child(2) {
+    border-radius: 0 10px 0 0;
+}
+
+#content .value_list li:nth-child(3) {
+    border-radius: 0 0 0 10px;
+}
+
+#content .value_list li:last-child {
+    border-radius: 0 0 10px;
+}
+
+#content .value_list span {
+    color: var(--color-point-02);
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-small-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .value_list strong {
+    display: block;
+    margin-top: 12px;
+    color: var(--color-point-01);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+    white-space: nowrap;
+}
+
+/* 브랜드 슬로건 */
+#content .brand_slogan {
+    padding: 40px 6%;
+    box-sizing: border-box;
+    background: var(--color-point-01);
+    color: var(--color-white);
+    text-align: center;
+}
+
+#content .brand_slogan > strong {
+    display: block;
+    font-size: var(--font-h3-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .brand_slogan a {
+    display: inline-block;
+    margin-top: 24px;
+    color: var(--color-white);
+    font-size: var(--font-body-large-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+#content .brand_slogan a span {
+    display: inline-block;
+    margin-left: 8px;
+    font-family: var(--font-family-en);
+}
+
+@media screen and (min-width: 500px) {
+    #content .brand_values .mobile_break {
+        display: none;
+    }
+    #content .brand_essence,
+    #content .brand_name,
+    #content .brand_story,
+    #content .brand_values {
+        padding-top: 72px;
+        padding-bottom: 72px;
+    }
+
+    #content .essence_image {
+        height: 360px;
+    }
+
+    #content .essence_copy {
+        padding: 32px;
+    }
+
+    #content .brand_word img {
+        height: 25px;
+    }
+
+    #content .story_image {
+        height: 332px;
+    }
+
+    #content .story_copy {
+        padding: 32px;
+    }
+
+    #content .brand_slogan {
+        padding-top: 52px;
+        padding-bottom: 52px;
+    }
+}

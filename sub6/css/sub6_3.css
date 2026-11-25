@@ -1,0 +1,187 @@
+@charset "UTF-8";
+
+/* ========================================
+   투자정보 본문 공통
+======================================== */
+
+#content .title_area + .content_area{
+    width: 1400px;
+    margin: 0 auto;
+    padding: 0 0 200px;
+    box-sizing: border-box;
+}
+
+#content .section_title{
+    width: 100%;
+    margin-bottom: 55px;
+}
+
+#content .section_label{
+    position: relative;
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-large-size);
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+#content .section_label span{
+    margin-right: 7px;
+}
+
+#content .section_label::after{
+    content: '';
+    width: 80px;
+    height: 3px;
+    margin-top: 10px;
+    display: block;
+    background: var(--color-main-01);
+}
+
+#content .section_title h3{
+    margin-top: 35px;
+    color: var(--color-font-01);
+    font-size: var(--font-display-medium-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+#content .section_desc{
+    margin-top: 12px;
+    color: var(--color-font-02);
+    font-size: var(--font-label-large-size);
+    line-height: 1.7;
+}
+
+/* ========================================
+   01 주가정보
+======================================== */
+
+#content .stock_content{
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+    border: 1px solid var(--color-light-gray);
+    box-sizing: border-box;
+    background: var(--color-white);
+}
+
+#content .stock_content iframe{
+    width: 100%;
+    height: 100%;
+    display: block;
+    border: 0;
+}
+
+#content .financial_info{
+    margin-top: 140px;
+}
+
+#content .investment_notice{
+    margin-top: 60px;
+}
+
+#content .investment_notice p{
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.7;
+    word-break: keep-all;
+}
+
+
+/* ========================================
+   02 재무정보
+======================================== */
+
+#content .financial_table{
+    width: 100%;
+}
+
+#content .table_unit{
+    margin-bottom: 15px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.4;
+    text-align: right;
+}
+
+#content .financial_table table{
+    width: 100%;
+    border-top: 1px solid var(--color-black);
+    border-collapse: collapse;
+    box-sizing: border-box;
+    overflow: hidden;
+    table-layout: fixed;
+}
+
+#content .financial_table col.category{
+    width: 40%;
+}
+
+#content .financial_table thead tr{
+    height: 75px;
+    background: var(--color-black);
+}
+
+#content .financial_table thead th{
+    padding: 0 28px;
+    box-sizing: border-box;
+    color: var(--color-white);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-medium-size);
+    font-weight: 700;
+    line-height: 1.4;
+    text-align: right;
+}
+
+#content .financial_table thead th:first-child{
+    font-family: var(--font-family-kr);
+    text-align: left;
+}
+
+#content .financial_table tbody tr{
+    height: 75px;
+    background: var(--color-white);
+}
+
+#content .financial_table tbody tr.total{
+    background: var(--color-sub-01);
+}
+
+#content .financial_table tbody th,
+#content .financial_table tbody td{
+    padding: 0 28px;
+    border-bottom: 1px solid var(--color-light-gray);
+    box-sizing: border-box;
+    color: var(--color-font-01);
+    font-size: var(--font-label-large-size);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+#content .financial_table tbody th{
+    text-align: left;
+}
+
+#content .financial_table tbody td{
+    font-family: var(--font-family-en);
+    text-align: right;
+}
+
+#content .financial_table tbody tr.total th,
+#content .financial_table tbody tr.total td{
+    font-weight: 700;
+}
+
+#content .financial_table tbody tr:last-child th,
+#content .financial_table tbody tr:last-child td{
+    border-bottom: 1px solid var(--color-light-gray);
+}
+
+#content .table_standard{
+    margin-top: 12px;
+    color: var(--color-font-02);
+    font-size: var(--font-body-medium-size);
+    line-height: 1.4;
+    text-align: right;
+}

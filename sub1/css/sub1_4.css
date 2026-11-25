@@ -1,0 +1,554 @@
+@charset "UTF-8";
+
+/* 오시는 길 본문 전체 영역 */
+.content_area {
+    width: 1400px;
+    margin: 0 auto;
+    padding-bottom: 180px;
+}
+
+/* ===== 01 LOCATION - 본사 ===== */
+
+/* 섹션 영문 제목 */
+.section_label {
+    color: var(--color-main-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-large-size);
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+/* 섹션 제목 하단 포인트 선 */
+.section_label::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin-top: 14px;
+    border-radius: 2px;
+    background: var(--color-main-01);
+}
+
+/* 섹션 도입 문구 */
+.section_intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+}
+
+/* 도입 문구 왼쪽 안내문 */
+.section_intro p:first-child {
+    width: 760px;
+    color: var(--color-font-01);
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* 도입 문구 오른쪽 설명 */
+.section_intro p:last-child {
+    width: 470px;
+    color: var(--color-font-02);
+    font-size: var(--font-label-large-size);
+    font-weight: 400;
+    line-height: 1.8;
+}
+
+/* 사업장 구분 탭 */
+.office_tabs {
+    display: flex;
+    margin-top: 70px;
+}
+
+/* 사업장 구분 개별 항목 */
+.office_tab {
+    width: 50%;
+}
+
+/* 사업장 이동 링크 */
+.office_tab a {
+    display: flex;
+    width: 100%;
+    height: 74px;
+    align-items: flex-start;
+    justify-content: center;
+    box-sizing: border-box;
+    border-bottom: 1px solid #d1d4d9;
+    color: var(--color-font-03);
+    font-family: var(--font-family-kr);
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* 현재 선택된 사업장 표시 */
+.office_tab a.active {
+    border-bottom: 4px solid var(--color-main-01);
+    color: var(--color-font-01);
+    font-weight: 700;
+}
+
+/* 사업장 기본 정보 */
+.office_info {
+    display: flex;
+    gap: 40px;
+    min-height: 285px;
+    margin-top: 75px;
+}
+
+/* 사업장명 및 주소 영역 */
+.office_basic {
+    width: 660px;
+}
+
+/* 사업장 영문명과 정보 영문 라벨 */
+.office_en, .office_basic dt, .branch_contact dt {
+    color: var(--color-font-03);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-small-size);
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+/* 사업장 한글명 */
+.office_basic h3 {
+    margin-top: 18px;
+    color: var(--color-font-01);
+    font-size: var(--font-display-medium-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* 사업장 주소 정보 */
+.office_basic dl {
+    margin-top: 18px;
+}
+
+/* 주소 및 전화번호 영문 라벨 */
+.office_basic dt, .branch_contact dt {
+    font-weight: 600;
+}
+
+/* 주소 및 전화번호 값 */
+.office_basic dd, .branch_contact dd {
+    margin-top: 8px;
+    font-size: var(--font-label-large-size);
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* 경로 자세히 보기 버튼 */
+.route_btn {
+    display: flex;
+    width: 270px;
+    height: 46px;
+    margin-top: 28px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--color-main-01);
+    color: var(--color-white);
+    font-size: var(--font-label-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* 버튼 화살표 이동 효과 */
+.route_btn span {
+    transition: transform .25s ease;
+}
+
+.route_btn:hover span {
+    transform: translateX(5px);
+}
+
+/* 본사 문의 전화 영역 */
+.contact_panel {
+    width: 700px;
+    height: 285px;
+    padding: 24px 28px;
+    box-sizing: border-box;
+    background: #f6f7f8;
+}
+
+/* 문의 전화 제목 */
+.contact_panel .contact_title {
+    display: block;
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* 문의처 목록 */
+.contact_list {
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    gap: 12px 24px;
+    margin-top: 12px;
+}
+
+/* 문의처 개별 항목 */
+.contact_list div {
+    height: 62px;
+}
+
+/* 문의처 구분명 */
+.contact_list dt {
+    color: var(--color-font-02);
+    font-size: var(--font-body-small-size);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* 문의 전화번호 */
+.contact_list dd {
+    margin-top: 5px;
+    font-family: var(--font-family-en);
+    font-size: var(--font-label-medium-size);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* A/S 콜센터 안내 */
+.call_center {
+    margin-top: 1px;
+}
+
+/* A/S 콜센터 전화번호 */
+.call_center strong {
+    display: block;
+    font-size: var(--font-label-large-size);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+/* A/S 콜센터 운영시간 */
+.call_center span {
+    display: block;
+    color: var(--color-font-02);
+    font-size: var(--font-body-small-size);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* 사업장 지도 */
+.office_map {
+    width: 1400px;
+    height: 600px;
+    margin-top: 140px;
+    border: 1px solid #d1d4d9;
+    box-sizing: border-box;
+}
+
+/* 지도 우측 중앙의 줌 컨트롤 아래에 배치하는 위치 복귀 버튼 */
+.office_map .map_zoom {
+    position: relative;
+}
+
+.office_map .map_return {
+    /* 줌 컨트롤 높이가 달라져도 항상 하단에서 4px 아래에 배치 */
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px solid #d1d4d9;
+    border-radius: 0;
+    background: var(--color-white);
+    cursor: pointer;
+}
+
+.office_map .map_return img {
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+
+.office_map .map_return:hover,
+.office_map .map_return:focus-visible {
+    border-color: #4b7bff;
+    background: #f5f8ff;
+}
+
+.office_map .map_return:focus-visible {
+    outline: 2px solid #4b7bff;
+    outline-offset: -2px;
+}
+
+/* ===== 02 TRANSPORTATION ===== */
+
+/* 대중교통 안내 영역 */
+.transport_section {
+    margin-top: 150px;
+}
+
+/* 대중교통 도입 문구 */
+.transport_intro {
+    margin-top: 70px;
+}
+
+/* 대중교통 영역 메인 제목 */
+.transport_intro .transport_title {
+    display: block;
+    color: var(--color-font-01);
+    font-size: var(--font-display-medium-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* 메인 제목 하단 설명 */
+.transport_intro > div > p {
+    margin-top: 12px;
+    color: var(--color-font-01);
+    font-size: var(--font-label-large-size);
+    font-weight: 400;
+    line-height: 1.7;
+}
+
+/* 교통수단별 소제목 영역 */
+.transport_heading {
+    margin-top: 70px;
+}
+
+/* 교통수단 영문 번호 */
+.transport_heading span {
+    color: var(--color-font-02);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-small-size);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* 교통수단 한글 제목 */
+.transport_heading strong {
+    display: block;
+    margin-top: 8px;
+    color: var(--color-font-01);
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* 지하철 안내 카드 */
+.subway_card {
+    height: 300px;
+    margin-top: 60px;
+    padding-top: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: #f7f8ff;
+    text-align: center;
+}
+
+/* 지하철 노선 표시 막대 */
+.subway_line {
+    width: 250px;
+    height: 29px;
+    margin: 20px auto 16px;
+    border-radius: 20px;
+    background: #004a85;
+    position: relative;
+}
+
+/* 지하철 호선 번호 */
+.subway_line span {
+    width: 54px;
+    height: 54px;
+    position: absolute;
+    left: 98px;
+    top: -13px;
+    border: 6px solid #004a85;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background: #fff;
+    color: var(--color-font-01);
+    font-family: var(--font-family-en);
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* 지하철 안내 제목 */
+.subway_card .card_title {
+    display: block;
+    font-size: var(--font-h5-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* 지하철 이동 경로 설명 */
+.subway_card p {
+    margin-top: 8px;
+    color: var(--color-font-02);
+    font-size: var(--font-label-large-size);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* 공통 자세히 보기 버튼 */
+.detail_btn {
+    display: flex;
+    width: 138px;
+    height: 48px;
+    margin: 16px auto 0;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: #ef0001;
+    color: var(--color-white);
+    font-size: var(--font-label-medium-size);
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+/* 버스 안내 카드 목록 */
+.bus_heading {
+    margin-top: 80px;
+}
+
+/* 버스 안내 카드 정렬 */
+.bus_cards {
+    display: flex;
+    gap: 50px;
+    margin-top: 60px;
+}
+
+/* 버스 안내 개별 카드 */
+.bus_card {
+    width: 675px;
+    height: 350px;
+    padding-top: 26px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* 광화문 방향 카드 배경 */
+.bus_card.blue {
+    background: #eff7ff;
+}
+
+/* 동대문 방향 카드 배경 */
+.bus_card.green {
+    background: #fff8f2;
+}
+
+/* 버스 원형 아이콘 */
+.bus_icon {
+    display: flex;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 16px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #087cc1;
+    color: var(--color-white);
+    font-family: var(--font-family-en);
+    font-size: var(--font-body-small-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* 동대문 방향 버스 아이콘 */
+.green .bus_icon {
+    background: #43b82f;
+}
+
+/* 버스 이용 방향 제목 */
+.bus_card .card_title {
+    display: block;
+    font-size: var(--font-body-xlarge-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* 하차 정류장 */
+.bus_card > strong:not(.card_title) {
+    display: block;
+    margin-top: 16px;
+    font-size: var(--font-label-large-size);
+    font-weight: 700;
+    line-height: 1.4;
+}
+
+/* 정류장 하차 후 이동 경로 */
+.bus_card p {
+    margin-top: 16px;
+    color: var(--color-font-02);
+    font-size: var(--font-label-medium-size);
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* 버스 카드 내부 상세보기 버튼 */
+.bus_card .detail_btn {
+    margin-top: 16px;
+}
+
+/* ===== 01 LOCATION - 나주지사 ===== */
+
+/* 나주지사 정보 정렬 */
+.naju_info {
+    align-items: flex-start;
+}
+
+/* 나주지사 연락처 영역 */
+.branch_contact {
+    width: 300px;
+    margin-top: 36px;
+}
+
+/* 나주지사 경로 버튼 */
+.branch_contact .route_btn {
+    margin-top: 29px;
+}
+
+/* 나주지사 섹션 배치 */
+.naju {
+    margin-top: 0;
+}
+
+/* 나주지사 기본 정보 높이 */
+.naju .office_info {
+    min-height: 204px;
+}
+
+/* 나주지사 지도 상단 간격 */
+.naju .office_map {
+    margin-top: 120px;
+}
+
+/* 1400px 이하 화면 대응 */
+@media (max-width: 1450px) {
+    .content_area {
+        width: calc(100% - 60px);
+    }
+    .office_map {
+        width: 100%;
+    }
+    .office_info {
+        gap: 3%;
+    }
+    .office_basic {
+        width: 47%;
+    }
+    .contact_panel {
+        width: 50%;
+    }
+    .bus_cards {
+        gap: 3.5%;
+    }
+    .bus_card {
+        width: 48.25%;
+    }
+}
